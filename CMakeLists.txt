@@ -11,6 +11,8 @@ include_directories(/home/wls81/envs/tensorflow/tensorflow-1.15.4)
 include_directories(~/envs/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include)
 include_directories(~/envs/tensorflow/tensorflow-1.15.4/bazel-genfiles)
 include_directories(include)
+include_directories(thrift/thrift_model)
+include_directories(~/envs/thrift-0.13.0/lib/cpp/src)
 #include_directories(abseil-cpp)
 
 
@@ -32,6 +34,21 @@ add_library( # Sets the name of the library.
         jsoncpp/json_writer.cpp
         )
 
+add_library( # Sets the name of the library.
+        thrift_model_predict
+
+        # Sets the library as a shared library.
+        STATIC
+
+        # Provides a relative path to your source file(s).
+        thrift/thrift_model/model_predict_constants.cpp
+        thrift/thrift_model/model_predict_types.cpp
+        thrift/thrift_model/ModelPredictService_server.skeleton.cpp
+        thrift/thrift_model/ModelPredictService.cpp
+        thrift/thrift_model/nx_adp_constants.cpp
+        thrift/thrift_model/nx_adp_types.cpp
+        )
+
 link_directories(
     build
 )
@@ -41,4 +58,5 @@ target_link_libraries(hello_tf
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_cc.so
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_framework.so
         jsoncpp
+        thrift_model_predict
         )

@@ -53,6 +53,9 @@ class FeatureConfigure{
         int load(string & filepath);
        Json::Value config_json;
        int dim;
-       vector<ColumnIndexer> indexer;
+       vector<ColumnIndexer> indexers;
+       Tensor get_tensor( map<string,string> row_value);
        string to_string();
+       static FeatureConfigure* get_feature_config();
+       static FeatureConfigure* feature_config;
 };

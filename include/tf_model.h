@@ -15,7 +15,11 @@ using namespace tensorflow;
 class TFModel{
     public:
         int load(string & filepath);
-        int predict(Tensor & input);
+        float predict(Tensor & input);
+
+        static TFModel* tfmodel;
+        static TFModel* get_tfmodel();
+
    private:
       Session *session;
       GraphDef graphdef;

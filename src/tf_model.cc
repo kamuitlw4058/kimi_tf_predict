@@ -1,5 +1,15 @@
 #include<tf_model.h>
 
+TFModel* TFModel::tfmodel = TFModel::get_tfmodel();
+
+TFModel* TFModel::get_tfmodel(){
+    TFModel* tfmodel = new TFModel();
+    string model_path("model/frozen_model.pb");
+    tfmodel->load(model_path);
+    return tfmodel;
+}
+
+
 int TFModel::load(string & filepath){
     Status status;
 
@@ -31,7 +41,7 @@ int TFModel::load(string & filepath){
 }
 
 
- int TFModel::predict(Tensor & input){
+ float TFModel::predict(Tensor & input){
     Status status;
     vector<pair<string, Tensor>> inputs = {{"input/x:0", input}};
     vector<Tensor> outputs;
@@ -46,5 +56,5 @@ int TFModel::load(string & filepath){
 
     cout << outputs[0].flat<float>() << endl;
 
-    return 0;
+    return *(outputs[0].flat<float>().data());
  }

@@ -1,6 +1,4 @@
 #include<feature_configure.h>
-#include <tensorflow/core/platform/env.h>
-#include <tensorflow/core/public/session.h>
 #include<utils.h>
 
 string ValueIndexer::to_string(){
@@ -19,39 +17,69 @@ int ValueIndexer::opt(string & col_value,Tensor & output){
 
 
 int ScalarIndexer::opt(string & col_value,Tensor & output){
-    cout<<"ScalarIndexer\n";
+    float v = atof(col_value.c_str());
+    v = (v - (this->mean)) / this->std;
+    float *pointor = output.flat<float>().data();
+    *(pointor + this->index) = v;
     return 0;
 }
 
 int OneHotIndexer::opt(string & col_value,Tensor & output){
-    cout<<"OneHotIndexer\n";
+    unordered_map<string,int>::const_iterator got = this->index_mapper.find(col_value);
+    if (got !=  this->index_mapper.end()){
+        float *pointor = output.flat<float>().data();
+        *(pointor + got->second) = 1.0;
+    }
     return 0;
 }
+
+
+int ColumnIndexer::opt(string & col_value,Tensor & output){
+    for(auto indexer : this->value_indexer){
+        indexer->opt(col_value,output);
+    }
+    return 0;
+}
+
 
 
 
 string ColumnIndexer::to_string(){
     string ret;
-    ret.append("<name:" + string(typeid(this).name()) + " ");
-    ret.append("len:" + std::to_string((long )(this->value_indexer.size())) + ">\n");
-    int value_indexer_len = this->value_indexer.size();
-    for(int i =0;i < value_indexer_len; i ++){
-        cout << this->value_indexer[i]->to_string() << endl;
-        ValueIndexer* indexer =  this->value_indexer[i];
-        ret.append("\t" +indexer->to_string());
-        string s("test");
-         cout << s << endl;
-        Tensor input(DT_FLOAT, TensorShape({1,  5}));
-         cout << "end input" << endl;
-        indexer->opt(s,input);
-         cout << "end opt" << endl;
-    }
+    ret.append("<ColumnIndexer name:" + this->input_col + " ");
+    ret.append("len:" + std::to_string((long )(this->value_indexer.size())) + ">");
     return ret;
 
 }
 
+Tensor FeatureConfigure:: get_tensor(map<string,string> row_value){
+    Tensor input(DT_FLOAT, TensorShape({1,  this->dim}));
+    for (auto indexer : this->indexers)
+    {
+        auto value =  row_value.find(indexer.input_col);
+        if(value != row_value.end()){
+            indexer.opt(value->second,input);
+        }
+        cout << indexer.to_string() << endl;
+    }
+    return input;
+
+}
+
+FeatureConfigure* FeatureConfigure::feature_config = FeatureConfigure::get_feature_config();
+
+FeatureConfigure* FeatureConfigure::get_feature_config(){
+    string config_path("data/features.json");
+    FeatureConfigure* feature_configure = new FeatureConfigure();
+    feature_configure->load(config_path);
+    FeatureConfigure::feature_config = feature_configure;
+
+    return FeatureConfigure::feature_config;
+}
+
 
 int FeatureConfigure::load(string &filepath){
+    cout<<"start to load feature configure..."<<endl;
     Json::Value value =   get_json(filepath);
     this->dim = value["dim"].asInt();
     int indexer_size = value["indexer"].size();
@@ -60,7 +88,6 @@ int FeatureConfigure::load(string &filepath){
     vector<ColumnIndexer> column_indexer_list;
     for (Json::Value::Members::iterator iter = cols_keys.begin(); iter != cols_keys.end(); iter++){
         string col_name = (*iter);
-        cout<<col_name<<endl;
         ColumnIndexer col_indexer;
         col_indexer.input_col = col_name;
         vector<ValueIndexer*> value_indexer_list;
@@ -71,7 +98,6 @@ int FeatureConfigure::load(string &filepath){
             string opt_type =  col_opt["opt"].asString();
 
             if(opt_type.compare("scaler") == 0){
-
                 ScalarIndexer* indexer = new ScalarIndexer();
                 indexer->index = col_opt["index"].asInt();
                 indexer->mean = col_opt["mean"].asDouble();
@@ -89,13 +115,16 @@ int FeatureConfigure::load(string &filepath){
                 indexer->index_mapper = index_mapper;
                 value_indexer_list.push_back(indexer);
             }
+            else if (opt_type.compare("muti-one-hot") == 0){
+
+            }
          }
          col_indexer.value_indexer = value_indexer_list;
 
          column_indexer_list.push_back(col_indexer);
 
     }
-    this->indexer = column_indexer_list;
+    this->indexers = column_indexer_list;
     return 0;
 
 }

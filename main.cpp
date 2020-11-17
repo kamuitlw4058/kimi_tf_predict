@@ -13,32 +13,56 @@ using namespace std;
 using namespace tensorflow;
 
 
+#include "ModelPredictService.h"
+#include <thrift/protocol/TBinaryProtocol.h>
+#include <thrift/server/TSimpleServer.h>
+#include <thrift/transport/TServerSocket.h>
+#include <thrift/transport/TBufferTransports.h>
 
+using namespace ::apache::thrift;
+using namespace ::apache::thrift::protocol;
+using namespace ::apache::thrift::transport;
+using namespace ::apache::thrift::server;
+
+class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
+ public:
+  ModelPredictServiceHandler() {
+    // Your initialization goes here
+  }
+
+  double predict(const std::map<std::string, std::string> & row) {
+    FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+   // row["Device_Os"] = "ios";
+    Tensor v = feature_configure->get_tensor(row);
+    show_tensor_value(v,feature_configure->dim);
+
+    TFModel* tfmodel = TFModel::tfmodel;
+    printf("predict\n");
+
+    return tfmodel->predict(v);
+    
+  }
+
+};
 
 
 
 int main()
 {
-    string config_path("data/features.json");
-    FeatureConfigure feature_configure;
-    feature_configure.load(config_path);
-    cout<< feature_configure.dim << endl;
-    int indexer_len =  feature_configure.indexer.size();
-    for(int i =0;i<indexer_len ;i ++){
-        cout << feature_configure.indexer[i].to_string();
+    FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+    cout<< feature_configure->dim << endl;
+    for(auto indexer : feature_configure->indexers){
+        cout << indexer.to_string() << endl;
     }
 
-    TFModel tfmodel;
-    string model_path("model/frozen_model.pb");
-    tfmodel.load(model_path);
-    
-    Tensor input(DT_FLOAT, TensorShape({1,  feature_configure.dim}));
-    float *pointor = input.flat<float>().data();
-    *pointor = 1.0;
-    *(pointor + 1) = 1.0;
-    *(pointor + 2) = 1.0;
-    *(pointor + 3) = 0.0;
-    *(pointor + 4) = 1.67;
+  int port = 9090;
+  ::std::shared_ptr<ModelPredictServiceHandler> handler(new ModelPredictServiceHandler());
+  ::std::shared_ptr<TProcessor> processor(new ModelPredictServiceProcessor(handler));
+  ::std::shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
+  ::std::shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
+  ::std::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
 
-    tfmodel.predict(input);
+  TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
+  server.serve();
+  return 0;
 }
