@@ -52,9 +52,7 @@ int TFModel::load(string & filepath){
         // cout << status.ToString() << endl;
         return 1;
     }
-    // cout << "Session Run Succ" << endl;
 
-    // cout << outputs[0].flat<float>() << endl;
 
     return *(outputs[0].flat<float>().data());
  }
@@ -66,15 +64,15 @@ int TFModel::load(string & filepath){
     Status status;
     vector<pair<string, Tensor>> inputs = {{"input/x:0", *input}};
     vector<Tensor> outputs;
-     auto v = input->flat<float>();
-    for( int i =0;i < list_size;i ++)
-    {
-        for(int j = 0;j < dim;j++)
-        {
-            cout << "Row:" + std::to_string(i) + "input data index:" + std::to_string(j) + " value:" + std::to_string(v(i * dim + j)) <<endl;
-        }
+    //  auto v = input->flat<float>();
+    // for( int i =0;i < list_size;i ++)
+    // {
+    //     for(int j = 0;j < dim;j++)
+    //     {
+    //         cout << "Row:" + std::to_string(i) + "input data index:" + std::to_string(j) + " value:" + std::to_string(v(i * dim + j)) <<endl;
+    //     }
         
-    }
+    // }
 
     status = this->session->Run(inputs, {"lr/Sigmoid:0"}, {}, &outputs);
     if (!status.ok())
@@ -85,7 +83,7 @@ int TFModel::load(string & filepath){
     auto values= outputs[0].flat<float>();
 
     for(int i =0;i < list_size;i++){
-         cout << "return :" + std::to_string(values(i)) << endl;
+         //cout << "return :" + std::to_string(values(i)) << endl;
         output.push_back(values(i));
     }
 

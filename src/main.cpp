@@ -32,13 +32,8 @@ class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
 
   double predict(const std::map<std::string, std::string> & row) {
     FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-   // row["Device_Os"] = "ios";
     Tensor* v = feature_configure->get_tensor(row);
-    //show_tensor_value(v,feature_configure->dim);
-
     TFModel* tfmodel = TFModel::tfmodel;
-    //printf("predict\n");
-
     return tfmodel->predict(v);
     
   }
@@ -46,10 +41,10 @@ class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
     void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows) {
       int rows_len = rows.size();
         FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-         cout<<"get rows"<<endl;
+         //cout<<"get rows"<<endl;
       Tensor* v = feature_configure->get_tensor(rows);
        TFModel* tfmodel = TFModel::tfmodel;
-      cout<<"start predict list"<<endl;
+      // cout<<"start predict list"<<endl;
        tfmodel->predictList(v,rows_len,feature_configure->dim,_return);
 
   }

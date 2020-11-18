@@ -8,7 +8,6 @@ string ValueIndexer::to_string(){
 
 }
 
-
 int ValueIndexer::opt(const string & col_value,float * output){
     cout<<"ValueIndexer\n";
     return 0;
@@ -26,7 +25,7 @@ int ScalarIndexer::opt(const string & col_value,float * output){
 int OneHotIndexer::opt(const string & col_value,float * output){
     unordered_map<string,int>::const_iterator got = this->index_mapper.find(col_value);
     if (got !=  this->index_mapper.end()){
-        cout<< "onehot index:" + std::to_string(got->second) << endl;
+        // cout<< "onehot index:" + std::to_string(got->second) << endl;
         *(output + got->second) = 1.0;
     }
     return 0;
@@ -54,7 +53,7 @@ string ColumnIndexer::to_string(){
 Tensor* FeatureConfigure:: get_tensor(map<string,string> row_value){
     Tensor* input = new Tensor (DT_FLOAT, TensorShape({1,  this->dim}));
     float *pointor = input->flat<float>().data();
-    for(int i =0;i < rows_size;i++){
+    for(int i =0;i <  this->dim;i++){
             *(pointor + (i * this->dim)) = 0.0;
     }
     for (auto indexer : this->indexers)
@@ -66,12 +65,11 @@ Tensor* FeatureConfigure:: get_tensor(map<string,string> row_value){
         }
     }
     return input;
-
 }
 
 Tensor* FeatureConfigure:: get_tensor( const vector<map<string, string> > & rows){
     int rows_size = rows.size();
-    cout << "rows_size:" + std:: to_string(rows_size) << endl;
+    // cout << "rows_size:" + std:: to_string(rows_size) << endl;
     Tensor* input = new Tensor (DT_FLOAT, TensorShape({rows_size,  this->dim}));
     float *pointor = input->flat<float>().data();
     for(int i =0;i < rows_size;i++){
@@ -80,12 +78,12 @@ Tensor* FeatureConfigure:: get_tensor( const vector<map<string, string> > & rows
         }
     }
     for( int i =0; i < rows_size;i ++){
-        cout << "row:" + std::to_string(i) << endl;
+        // cout << "row:" + std::to_string(i) << endl;
         for (auto indexer : this->indexers)
         {
             auto value =  rows[i].find(indexer.input_col);
             if(value != rows[i].end()){
-                cout << "col:" + indexer.input_col + " value:" +  value->second << endl;
+                // cout << "col:" + indexer.input_col + " value:" +  value->second << endl;
                 indexer.opt(value->second,pointor+ (this->dim * i));
             }
             //cout << indexer.to_string() << endl;
