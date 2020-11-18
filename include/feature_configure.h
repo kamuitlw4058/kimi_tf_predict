@@ -10,9 +10,12 @@
 #include <xn_errno.h>
 #include <unordered_map>
 
+
 using namespace std;
 using namespace tensorflow;
 
+#ifndef FEATURE_CONFIGURE
+#define FEATURE_CONFIGURE
 
 class ValueIndexer{
     public:
@@ -60,3 +63,5 @@ class FeatureConfigure{
        static FeatureConfigure* get_feature_config();
        static FeatureConfigure* feature_config;
 };
+
+#endif 

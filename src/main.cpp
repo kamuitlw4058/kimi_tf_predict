@@ -5,6 +5,7 @@
 #include <map>
 #include <vector>
 #include <json/json.h>
+
 #include <utils.h>
 #include <feature_configure.h>
 #include <tf_model.h>
@@ -12,8 +13,9 @@
 using namespace std;
 using namespace tensorflow;
 
+#include <ml.pb.h>
 
-#include "ModelPredictService.h"
+#include "model_predict_service.h"
 #include <thrift/protocol/TBinaryProtocol.h>
 #include <thrift/server/TSimpleServer.h>
 #include <thrift/transport/TServerSocket.h>
@@ -23,33 +25,42 @@ using namespace ::apache::thrift;
 using namespace ::apache::thrift::protocol;
 using namespace ::apache::thrift::transport;
 using namespace ::apache::thrift::server;
+using namespace ::xnad::ml;
 
-class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
- public:
-  ModelPredictServiceHandler() {
-    // Your initialization goes here
-  }
 
-  double predict(const std::map<std::string, std::string> & row) {
-    FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-    Tensor* v = feature_configure->get_tensor(row);
-    TFModel* tfmodel = TFModel::tfmodel;
-    return tfmodel->predict(v);
+
+// class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
+//  public:
+//   ModelPredictServiceHandler() {
+//   }
+//   void predictPb(std::string& _return, const std::string& request_msg) {
+//      PredictRequest predictRequest;
+//         if (!predictRequest.ParseFromString(request_msg)) {
+//         std::cout << "parse error\n";
+//     }
+//     predictRequest.get
+//     printf("predictPb\n");
+//   }
+
+
+//   double predict(const std::map<std::string, std::string> & row) {
+//     FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+//     Tensor* v = feature_configure->get_tensor(row);
+//     TFModel* tfmodel = TFModel::tfmodel;
+//     return tfmodel->predict(v);
     
-  }
+//   }
 
-    void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows) {
-      int rows_len = rows.size();
-        FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-         //cout<<"get rows"<<endl;
-      Tensor* v = feature_configure->get_tensor(rows);
-       TFModel* tfmodel = TFModel::tfmodel;
-      // cout<<"start predict list"<<endl;
-       tfmodel->predictList(v,rows_len,feature_configure->dim,_return);
+//     void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows) {
+//       int rows_len = rows.size();
+//         FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+//       Tensor* v = feature_configure->get_tensor(rows);
+//        TFModel* tfmodel = TFModel::tfmodel;
+//        tfmodel->predictList(v,rows_len,feature_configure->dim,_return);
+    
+//   }
 
-  }
-
-};
+// };
 
 
 

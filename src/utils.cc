@@ -24,3 +24,16 @@ int show_tensor_value(Tensor *tensor,int len){
     }
     return 0;
 }
+
+string map2string(map<string,string>& m)
+{
+    string str="";
+    typename std::map<string,string>::iterator it = m.begin();
+    for(;it != m.end();it++)
+    {
+            str += "<";
+            str += it->first + ":" +it->second;
+            str += ">\n";
+    }
+    return str;
+}

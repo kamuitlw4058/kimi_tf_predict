@@ -11,6 +11,7 @@ include_directories(/home/wls81/envs/tensorflow/tensorflow-1.15.4)
 include_directories(~/envs/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include)
 include_directories(~/envs/tensorflow/tensorflow-1.15.4/bazel-genfiles)
 include_directories(include)
+include_directories(src/protobuf_model)
 include_directories(thrift/thrift_model)
 include_directories(~/envs/thrift-0.13.0/lib/cpp/src)
 #include_directories(abseil-cpp)
@@ -19,7 +20,10 @@ include_directories(~/envs/thrift-0.13.0/lib/cpp/src)
 add_executable(hello_tf src/main.cpp 
                 src/tf_model.cc
                 src/feature_configure.cc
-                src/utils.cc)
+                src/utils.cc
+                src/model_predict_service.cc
+                src/protobuf_model/ml.pb.cc
+                )
 add_library( # Sets the name of the library.
         jsoncpp
 

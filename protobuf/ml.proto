@@ -1,0 +1,73 @@
+
+syntax="proto3";
+
+package xnad.ml;
+
+message CandidateAd
+{
+    int32 planid = 1;     // 计划ID
+    int32 campid = 2; // 广告组ID
+    int32 advid = 3;  // 广告主ID
+    int32 landingtype = 4;    // 投放类型：APP，LINK
+    int32 imptype = 5;        // 广告位类型：开屏，插屏，视频，Feed，Banner
+    int32 actiontype = 6;     // 交互类型：APK下载，打开页面
+    string category = 7;     // 广告分类
+};
+message PredictRequest
+{
+    // 广告位信息
+    int32 pub_id = 1;
+    int32 app_id = 2;
+    int32 placement_id = 3;
+    int32 imp_type = 4;
+    string app_pkg = 5;
+    string app_name = 6;
+    int32 w = 7;
+    int32 h = 8;
+    // 应用版本
+    string app_ver = 9;
+
+    // 系统: 0 for android; 1 for ios
+    int32 os = 10;
+    // 系统版本
+    string osv = 11;
+    /*
+    设备硬件信息
+    */
+    // 设备品牌
+    string brand = 12;
+    // 设备型号
+    string model = 13;
+    // 设备类型: 0 unknown; 1 phone; 2 tablet
+    int32 devtype = 14;
+    // 设备ppi
+    int32 ppi = 15;
+    // SDK版本
+    string sdk_ver = 16;
+    // 设备方向: 0 portrait; 1 landscape
+    int32 orientation = 21;
+    // mccmnc
+    string operator = 24;
+    // 网络状态: 0 unknown; 1 wifi; 2 cellular; 3 cellular-3g; 4 cellular-4g; 5 cellular-5g;
+    int32 conn = 25;
+    string ip = 26;
+    string province = 27;   // 省份
+    string city = 28;   // 城市
+    string carrier = 29; // 运营商：移动/联通/电信
+
+    repeated CandidateAd ads = 30;
+};
+
+message PredictResult
+{
+    int32 planid = 1;
+    int32 pctr = 2;     // 预估ctr * 10^6
+    int32 pcvr = 3;     // 预估cvr * 10^6
+};
+message PredictResponse
+{
+    int32 code = 1;
+    string msg = 2;
+    repeated  PredictResult data = 3;
+};
+

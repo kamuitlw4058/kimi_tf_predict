@@ -12,6 +12,9 @@
 using namespace std;
 using namespace tensorflow;
 
+#ifndef TF_MODEL
+#define TF_MODEL
+
 class TFModel{
     public:
         int load(string & filepath);
@@ -25,3 +28,5 @@ class TFModel{
       GraphDef graphdef;
     
 };
+
+#endif

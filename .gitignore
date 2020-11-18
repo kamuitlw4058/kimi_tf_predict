@@ -4,3 +4,6 @@ model
 thrift/thrift_model
 python/model_predict
 python/nx_adp
+python/pb
+src/protobuf_model
+*.pyc
