@@ -9,32 +9,31 @@ string ValueIndexer::to_string(){
 }
 
 
-int ValueIndexer::opt(string & col_value,Tensor & output){
+int ValueIndexer::opt(const string & col_value,float * output){
     cout<<"ValueIndexer\n";
     return 0;
 }
 
 
 
-int ScalarIndexer::opt(string & col_value,Tensor & output){
+int ScalarIndexer::opt(const string & col_value,float * output){
     float v = atof(col_value.c_str());
     v = (v - (this->mean)) / this->std;
-    float *pointor = output.flat<float>().data();
-    *(pointor + this->index) = v;
+    *(output + this->index) = v;
     return 0;
 }
 
-int OneHotIndexer::opt(string & col_value,Tensor & output){
+int OneHotIndexer::opt(const string & col_value,float * output){
     unordered_map<string,int>::const_iterator got = this->index_mapper.find(col_value);
     if (got !=  this->index_mapper.end()){
-        float *pointor = output.flat<float>().data();
-        *(pointor + got->second) = 1.0;
+        cout<< "onehot index:" + std::to_string(got->second) << endl;
+        *(output + got->second) = 1.0;
     }
     return 0;
 }
 
 
-int ColumnIndexer::opt(string & col_value,Tensor & output){
+int ColumnIndexer::opt(const string & col_value,float * output){
     for(auto indexer : this->value_indexer){
         indexer->opt(col_value,output);
     }
@@ -52,19 +51,52 @@ string ColumnIndexer::to_string(){
 
 }
 
-Tensor FeatureConfigure:: get_tensor(map<string,string> row_value){
-    Tensor input(DT_FLOAT, TensorShape({1,  this->dim}));
+Tensor* FeatureConfigure:: get_tensor(map<string,string> row_value){
+    Tensor* input = new Tensor (DT_FLOAT, TensorShape({1,  this->dim}));
+    float *pointor = input->flat<float>().data();
+    for(int i =0;i < rows_size;i++){
+            *(pointor + (i * this->dim)) = 0.0;
+    }
     for (auto indexer : this->indexers)
     {
+        
         auto value =  row_value.find(indexer.input_col);
         if(value != row_value.end()){
-            indexer.opt(value->second,input);
+            indexer.opt(value->second,pointor);
         }
-        cout << indexer.to_string() << endl;
     }
     return input;
 
 }
+
+Tensor* FeatureConfigure:: get_tensor( const vector<map<string, string> > & rows){
+    int rows_size = rows.size();
+    cout << "rows_size:" + std:: to_string(rows_size) << endl;
+    Tensor* input = new Tensor (DT_FLOAT, TensorShape({rows_size,  this->dim}));
+    float *pointor = input->flat<float>().data();
+    for(int i =0;i < rows_size;i++){
+        for(int j= 0;j < this->dim;j ++){
+            *(pointor + (i * this->dim + j)) = 0.0;
+        }
+    }
+    for( int i =0; i < rows_size;i ++){
+        cout << "row:" + std::to_string(i) << endl;
+        for (auto indexer : this->indexers)
+        {
+            auto value =  rows[i].find(indexer.input_col);
+            if(value != rows[i].end()){
+                cout << "col:" + indexer.input_col + " value:" +  value->second << endl;
+                indexer.opt(value->second,pointor+ (this->dim * i));
+            }
+            //cout << indexer.to_string() << endl;
+        }
+    }
+
+
+    return input;
+
+}
+
 
 FeatureConfigure* FeatureConfigure::feature_config = FeatureConfigure::get_feature_config();
 

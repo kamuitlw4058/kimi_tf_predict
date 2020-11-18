@@ -17,8 +17,8 @@ Json::Value get_json(string &filepath){
     return root;
 }
 
-int show_tensor_value(Tensor &tensor,int len){
-    float *t = tensor.flat<float>().data();
+int show_tensor_value(Tensor *tensor,int len){
+    float *t = tensor->flat<float>().data();
     for(int i =0;i <len;i++){
         cout << to_string(*(t + i)) << endl;
     }

@@ -2,3 +2,5 @@ build
 lib
 model
 thrift/thrift_model
+python/model_predict
+python/nx_adp

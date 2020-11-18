@@ -16,7 +16,7 @@ include_directories(~/envs/thrift-0.13.0/lib/cpp/src)
 #include_directories(abseil-cpp)
 
 
-add_executable(hello_tf main.cpp 
+add_executable(hello_tf src/main.cpp 
                 src/tf_model.cc
                 src/feature_configure.cc
                 src/utils.cc)
@@ -57,6 +57,7 @@ link_directories(
 target_link_libraries(hello_tf
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_cc.so
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_framework.so
+        /usr/local/lib/libthrift-0.13.0.so
         jsoncpp
         thrift_model_predict
         )

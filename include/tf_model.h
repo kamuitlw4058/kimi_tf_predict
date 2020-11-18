@@ -15,8 +15,8 @@ using namespace tensorflow;
 class TFModel{
     public:
         int load(string & filepath);
-        float predict(Tensor & input);
-
+        float predict(Tensor * input);
+        void predictList(Tensor * input,int list_size, int dim,vector<double> & output);
         static TFModel* tfmodel;
         static TFModel* get_tfmodel();
 

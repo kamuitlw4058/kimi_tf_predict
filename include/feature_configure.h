@@ -16,7 +16,7 @@ using namespace tensorflow;
 
 class ValueIndexer{
     public:
-         virtual  int opt(string &col_value,Tensor & output);
+         virtual  int opt(const string &col_value,float * output);
          string to_string();
         
 };
@@ -27,14 +27,14 @@ class ScalarIndexer:   public  ValueIndexer {
         double mean;
         double std;
         int index;
-        int opt(string & col_value,Tensor & output);
+        int opt(const string & col_value,float * output);
         string to_string();
 };
 
 class OneHotIndexer:   public  ValueIndexer {
     public:
         unordered_map<string,int> index_mapper;
-        int opt(string &col_value,Tensor & output);
+        int opt(const string &col_value,float * output);
         string to_string();
 };
 
@@ -43,7 +43,7 @@ class ColumnIndexer{
      public:
         string input_col;
         vector<ValueIndexer*> value_indexer;
-        int opt(string &value, Tensor & output);
+        int opt(const string &value, float * output);
         string to_string();
 };
 
@@ -54,7 +54,8 @@ class FeatureConfigure{
        Json::Value config_json;
        int dim;
        vector<ColumnIndexer> indexers;
-       Tensor get_tensor( map<string,string> row_value);
+       Tensor* get_tensor( map<string,string> row_value);
+       Tensor* get_tensor( const vector<map<string, string> > & rows);
        string to_string();
        static FeatureConfigure* get_feature_config();
        static FeatureConfigure* feature_config;

@@ -16,4 +16,4 @@ string get_file(string &filepath);
 
 Json::Value get_json(string &filepath);
 
-int show_tensor_value(Tensor &tensor,int len);
+int show_tensor_value(Tensor *tensor,int len);
