@@ -9,9 +9,48 @@ void ModelPredictServiceHandler::convertPb(PredictRequest & request,vector<map<s
 
     auto ads_count = request.ads_size();
     auto os =  std::to_string( request.os());
+    auto brand = request.brand();
+    auto model = request.model();
+    auto devtype = request.devtype();
+    auto ppi = std::to_string(request.ppi());
+    auto mccmnc = request.operator_();
+    auto conn = std::to_string(request.conn());
+    auto province = request.province();
+    auto city = request.city();
+    auto carrier = request.carrier();
+
+
+
+
+
     for(int i = 0;i < ads_count;i ++){
         map<string,string> row_dict;
         row_dict["Device_Os"] = os;
+        row_dict["Device_Brand"] = brand;
+        row_dict["Device_Model"] = model;
+        row_dict["Device_Type"] = devtype;
+        row_dict["Device_Ppi"] = ppi;
+
+        row_dict["Network_MccMnc"] = mccmnc;
+        row_dict["Network_Carrier"] = carrier;
+        row_dict["Network_Connection"] = conn;
+
+        row_dict["Geo_City"] = city;
+        row_dict["Geo_Province"] = province;
+
+        CandidateAd ad = request.ads(i);
+        auto actiontype = std::to_string(ad.actiontype());
+        auto imptype = std::to_string(ad.imptype());
+        auto landingtype = std::to_string(ad.landingtype());
+        auto category = ad.category();
+
+
+        row_dict["Slot_Type"] = imptype;
+        row_dict["Slot_ActionType"] = actiontype;
+        row_dict["Slot_LandingType"] = landingtype;
+        row_dict["Slot_Category"] = category;
+
+
         ret.push_back(row_dict);
     }
 
@@ -19,7 +58,7 @@ void ModelPredictServiceHandler::convertPb(PredictRequest & request,vector<map<s
 }
 
 
-void ModelPredictServiceHandler:: predictPb(std::string& _return, const std::string& request_msg) {
+void ModelPredictServiceHandler:: predictPb(std::string& _return , const std::string& model_key,const std::string& request_msg) {
     PredictRequest predictRequest;
     if (!predictRequest.ParseFromString(request_msg)) {
         std::cout << "parse error\n";

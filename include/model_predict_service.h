@@ -16,7 +16,7 @@ using namespace ::xnad::ml;
 class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
  public:
   ModelPredictServiceHandler() ;
-  void predictPb(std::string& _return, const std::string& request_msg);
+  void predictPb(std::string& _return , const std::string& model_key , const std::string& request_msg);
 
   void convertPb(PredictRequest & request,vector<map<string,string>>  &ret);
 

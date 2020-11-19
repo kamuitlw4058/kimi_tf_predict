@@ -29,39 +29,6 @@ using namespace ::xnad::ml;
 
 
 
-// class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
-//  public:
-//   ModelPredictServiceHandler() {
-//   }
-//   void predictPb(std::string& _return, const std::string& request_msg) {
-//      PredictRequest predictRequest;
-//         if (!predictRequest.ParseFromString(request_msg)) {
-//         std::cout << "parse error\n";
-//     }
-//     predictRequest.get
-//     printf("predictPb\n");
-//   }
-
-
-//   double predict(const std::map<std::string, std::string> & row) {
-//     FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-//     Tensor* v = feature_configure->get_tensor(row);
-//     TFModel* tfmodel = TFModel::tfmodel;
-//     return tfmodel->predict(v);
-    
-//   }
-
-//     void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows) {
-//       int rows_len = rows.size();
-//         FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-//       Tensor* v = feature_configure->get_tensor(rows);
-//        TFModel* tfmodel = TFModel::tfmodel;
-//        tfmodel->predictList(v,rows_len,feature_configure->dim,_return);
-    
-//   }
-
-// };
-
 
 
 int main()

@@ -15,6 +15,7 @@ include_directories(src/protobuf_model)
 include_directories(thrift/thrift_model)
 include_directories(~/envs/thrift-0.13.0/lib/cpp/src)
 #include_directories(abseil-cpp)
+include_directories(/usr/local/inotify/include)
 
 
 add_executable(hello_tf src/main.cpp 
@@ -23,6 +24,7 @@ add_executable(hello_tf src/main.cpp
                 src/utils.cc
                 src/model_predict_service.cc
                 src/protobuf_model/ml.pb.cc
+                #src/fs_monitor.cc
                 )
 add_library( # Sets the name of the library.
         jsoncpp
@@ -62,6 +64,7 @@ target_link_libraries(hello_tf
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_cc.so
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_framework.so
         /usr/local/lib/libthrift-0.13.0.so
+        /usr/local/inotify/lib/libinotifytools.so
         jsoncpp
         thrift_model_predict
         )
