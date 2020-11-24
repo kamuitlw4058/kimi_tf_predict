@@ -60,8 +60,6 @@ class FeatureConfigure{
        Tensor* get_tensor( map<string,string> row_value);
        Tensor* get_tensor( const vector<map<string, string> > & rows);
        string to_string();
-       static FeatureConfigure* get_feature_config();
-       static FeatureConfigure* feature_config;
 };
 
 #endif 

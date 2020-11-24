@@ -20,8 +20,6 @@ class TFModel{
         int load(string & filepath);
         float predict(Tensor * input);
         void predictList(Tensor * input,int list_size, int dim,vector<double> & output);
-        static TFModel* tfmodel;
-        static TFModel* get_tfmodel();
 
    private:
       Session *session;

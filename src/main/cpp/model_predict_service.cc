@@ -19,10 +19,6 @@ void ModelPredictServiceHandler::convertPb(PredictRequest & request,vector<map<s
     auto city = request.city();
     auto carrier = request.carrier();
 
-
-
-
-
     for(int i = 0;i < ads_count;i ++){
         map<string,string> row_dict;
         row_dict["Device_Os"] = os;
@@ -57,7 +53,6 @@ void ModelPredictServiceHandler::convertPb(PredictRequest & request,vector<map<s
     return;
 }
 
-
 void ModelPredictServiceHandler:: predictPb(std::string& _return , const std::string& model_key,const std::string& request_msg) {
     PredictRequest predictRequest;
     if (!predictRequest.ParseFromString(request_msg)) {
@@ -67,35 +62,42 @@ void ModelPredictServiceHandler:: predictPb(std::string& _return , const std::st
     vector<map<string,string>> feature_rows;
     this->convertPb(predictRequest,feature_rows);
     auto rows_len = feature_rows.size();
-    // for(auto row : feature_rows){
-    //     cout << map2string(row) << endl;
-    // }
-    FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-    Tensor* v = feature_configure->get_tensor(feature_rows);
-    TFModel* tfmodel = TFModel::tfmodel;
-    vector<double> result;
-    tfmodel->predictList(v,rows_len,feature_configure->dim,result);
-    for(auto r :result){
-        cout << "result:" +  std::to_string(r) << endl;
+    auto model =   ModelManager::get(model_key);
+    if (model != nullptr){
+        vector<double> result;
+        model->predictList(feature_rows,result);
+        PredictResponse predictResponse;
+        for(auto r :result){
+            cout << "result:" +  std::to_string(r) << endl;
+            auto result_ptr =  predictResponse.add_data();
+            result_ptr->set_pctr(r * 1000000);
+        }
+        string result_msg("test");
+        predictResponse.set_code(0);
+        predictResponse.set_msg(result_msg);
+        predictResponse.SerializeToString(&_return);
     }
+
     //predictRequest.get
     cout <<"predictPb" << endl;
+    
 }
 
 
-double  ModelPredictServiceHandler::predict(const std::map<std::string, std::string> & row) {
-FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-Tensor* v = feature_configure->get_tensor(row);
-TFModel* tfmodel = TFModel::tfmodel;
-return tfmodel->predict(v);
+double  ModelPredictServiceHandler::predict( const std::map<std::string, std::string> & row) {
+// FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+// Tensor* v = feature_configure->get_tensor(row);
+// TFModel* tfmodel = TFModel::tfmodel;
+// return tfmodel->predict(v);
+return 0.0;
 
 }
 
 void  ModelPredictServiceHandler::predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows) {
-    int rows_len = rows.size();
-    FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-    Tensor* v = feature_configure->get_tensor(rows);
-    TFModel* tfmodel = TFModel::tfmodel;
-    tfmodel->predictList(v,rows_len,feature_configure->dim,_return);
+    // int rows_len = rows.size();
+    // FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+    // Tensor* v = feature_configure->get_tensor(rows);
+    // TFModel* tfmodel = TFModel::tfmodel;
+    // tfmodel->predictList(v,rows_len,feature_configure->dim,_return);
 }
 

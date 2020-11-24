@@ -96,20 +96,10 @@ Tensor* FeatureConfigure:: get_tensor( const vector<map<string, string> > & rows
 }
 
 
-FeatureConfigure* FeatureConfigure::feature_config = FeatureConfigure::get_feature_config();
-
-FeatureConfigure* FeatureConfigure::get_feature_config(){
-    string config_path("data/features.json");
-    FeatureConfigure* feature_configure = new FeatureConfigure();
-    feature_configure->load(config_path);
-    FeatureConfigure::feature_config = feature_configure;
-
-    return FeatureConfigure::feature_config;
-}
 
 
 int FeatureConfigure::load(string &filepath){
-    cout<<"start to load feature configure..."<<endl;
+    cout<<"start to load feature configure["<< filepath << "]..."<<endl;
     Json::Value value =   get_json(filepath);
     this->dim = value["dim"].asInt();
     int indexer_size = value["indexer"].size();

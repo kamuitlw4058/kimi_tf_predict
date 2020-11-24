@@ -19,12 +19,14 @@ include_directories(src/main/cpp/pb)
 include_directories(src/main/cpp/thrift)
 
 
-add_executable(hello_tf src/main/cpp/main.cpp 
+add_executable(tf_predictor src/main/cpp/main.cc 
                 src/main/cpp/tf_model.cc
                 src/main/cpp/feature_configure.cc
                 src/main/cpp/utils.cc
                 src/main/cpp/model_predict_service.cc
                 src/main/cpp/pb/ml.pb.cc
+                src/main/cpp/predict_model.cc
+                src/main/cpp/model_manager.cc
                 )
 add_library( # Sets the name of the library.
         jsoncpp
@@ -60,7 +62,7 @@ link_directories(
 )
 
 # Declare dependency on the absl::strings library
-target_link_libraries(hello_tf
+target_link_libraries(tf_predictor
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_cc.so
         ~/envs/tensorflow/tensorflow-1.15.4/bazel-bin/tensorflow/libtensorflow_framework.so
         /usr/local/lib/libthrift-0.13.0.so

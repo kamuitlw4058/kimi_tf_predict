@@ -7,3 +7,4 @@ python/nx_adp
 python/pb
 src/protobuf_model
 *.pyc
+src/main/python/api

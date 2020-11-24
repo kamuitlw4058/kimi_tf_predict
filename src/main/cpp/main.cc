@@ -33,11 +33,12 @@ using namespace ::xnad::ml;
 
 int main()
 {
-    FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
-    cout<< feature_configure->dim << endl;
-    for(auto indexer : feature_configure->indexers){
-        cout << indexer.to_string() << endl;
-    }
+  ModelManager::init();
+    // FeatureConfigure* feature_configure = FeatureConfigure::feature_config;
+    // cout<< feature_configure->dim << endl;
+    // for(auto indexer : feature_configure->indexers){
+    //     cout << indexer.to_string() << endl;
+    // }
 
   int port = 9090;
   ::std::shared_ptr<ModelPredictServiceHandler> handler(new ModelPredictServiceHandler());

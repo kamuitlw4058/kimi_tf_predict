@@ -1,16 +1,8 @@
 #include<tf_model.h>
 
-TFModel* TFModel::tfmodel = TFModel::get_tfmodel();
-
-TFModel* TFModel::get_tfmodel(){
-    TFModel* tfmodel = new TFModel();
-    string model_path("model/frozen_model.pb");
-    tfmodel->load(model_path);
-    return tfmodel;
-}
-
 
 int TFModel::load(string & filepath){
+     cout<<"start to load tfmodel["<< filepath << "]..."<<endl;
     Status status;
 
     status = NewSession(SessionOptions(), &this->session);

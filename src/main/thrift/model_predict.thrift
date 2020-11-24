@@ -1,4 +1,5 @@
 namespace java com.xiaoniuhy.adp.thrift
+namespace py api.thrift
 
 include 'nx_adp.thrift'
 

@@ -5,6 +5,7 @@
 #include <tf_model.h>
 #include <ml.pb.h>
 #include <memory.h>
+#include <model_manager.h>
 
 using namespace ::xnad::ml;
 
