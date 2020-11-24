@@ -46,7 +46,6 @@ void ModelPredictServiceHandler::convertPb(PredictRequest & request,vector<map<s
         row_dict["Slot_LandingType"] = landingtype;
         row_dict["Slot_Category"] = category;
 
-
         ret.push_back(row_dict);
     }
 
@@ -68,7 +67,6 @@ void ModelPredictServiceHandler:: predictPb(std::string& _return , const std::st
         model->predictList(feature_rows,result);
         PredictResponse predictResponse;
         for(auto r :result){
-            cout << "result:" +  std::to_string(r) << endl;
             auto result_ptr =  predictResponse.add_data();
             result_ptr->set_pctr(r * 1000000);
         }
@@ -77,10 +75,6 @@ void ModelPredictServiceHandler:: predictPb(std::string& _return , const std::st
         predictResponse.set_msg(result_msg);
         predictResponse.SerializeToString(&_return);
     }
-
-    //predictRequest.get
-    cout <<"predictPb" << endl;
-    
 }
 
 
