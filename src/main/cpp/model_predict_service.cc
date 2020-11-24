@@ -66,10 +66,14 @@ void ModelPredictServiceHandler:: predictPb(std::string& _return , const std::st
         vector<double> result;
         model->predictList(feature_rows,result);
         PredictResponse predictResponse;
-        for(auto r :result){
+        int count = result.size();
+        for (int i = 0; i < count;i++)
+        {
             auto result_ptr =  predictResponse.add_data();
-            result_ptr->set_pctr(r * 1000000);
+            result_ptr->set_pctr( result[i] * 1000000);
+            result_ptr->set_planid( predictRequest.ads(i).planid());
         }
+
         string result_msg("test");
         predictResponse.set_code(0);
         predictResponse.set_msg(result_msg);

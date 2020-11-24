@@ -13,12 +13,17 @@ message = PredictRequest()
 message.os = 1 # 赋值
 ad = message.ads.add() 
 ad.category = "test"
+ad.planid = 1
 
 ad = message.ads.add() 
 ad.category = "test1"
+ad.planid = 2
+
 
 ad = message.ads.add() 
 ad.category = "test2"
+ad.planid = 3
+
 
 v = message.SerializeToString()
 
