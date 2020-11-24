@@ -6,25 +6,25 @@ project(my_project)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(/usr/local/include)
-include_directories(jsoncpp)
+include_directories(/usr/local/inotify/include)
+
 include_directories(/home/wls81/envs/tensorflow/tensorflow-1.15.4)
 include_directories(~/envs/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include)
 include_directories(~/envs/tensorflow/tensorflow-1.15.4/bazel-genfiles)
-include_directories(include)
-include_directories(src/protobuf_model)
-include_directories(thrift/thrift_model)
 include_directories(~/envs/thrift-0.13.0/lib/cpp/src)
-#include_directories(abseil-cpp)
-include_directories(/usr/local/inotify/include)
+
+include_directories(src/main/cpp/jsoncpp)
+include_directories(src/main/cpp/include)
+include_directories(src/main/cpp/pb)
+include_directories(src/main/cpp/thrift)
 
 
-add_executable(hello_tf src/main.cpp 
-                src/tf_model.cc
-                src/feature_configure.cc
-                src/utils.cc
-                src/model_predict_service.cc
-                src/protobuf_model/ml.pb.cc
-                #src/fs_monitor.cc
+add_executable(hello_tf src/main/cpp/main.cpp 
+                src/main/cpp/tf_model.cc
+                src/main/cpp/feature_configure.cc
+                src/main/cpp/utils.cc
+                src/main/cpp/model_predict_service.cc
+                src/main/cpp/pb/ml.pb.cc
                 )
 add_library( # Sets the name of the library.
         jsoncpp
@@ -34,10 +34,10 @@ add_library( # Sets the name of the library.
 
         # Provides a relative path to your source file(s).
         #native-lib.cpp
-        jsoncpp/json_reader.cpp
-        jsoncpp/json_valueiterator.inl
-        jsoncpp/json_value.cpp
-        jsoncpp/json_writer.cpp
+        src/main/cpp/jsoncpp/json_reader.cpp
+        src/main/cpp/jsoncpp/json_valueiterator.inl
+        src/main/cpp/jsoncpp/json_value.cpp
+        src/main/cpp/jsoncpp/json_writer.cpp
         )
 
 add_library( # Sets the name of the library.
@@ -47,12 +47,12 @@ add_library( # Sets the name of the library.
         STATIC
 
         # Provides a relative path to your source file(s).
-        thrift/thrift_model/model_predict_constants.cpp
-        thrift/thrift_model/model_predict_types.cpp
-        thrift/thrift_model/ModelPredictService_server.skeleton.cpp
-        thrift/thrift_model/ModelPredictService.cpp
-        thrift/thrift_model/nx_adp_constants.cpp
-        thrift/thrift_model/nx_adp_types.cpp
+        src/main/cpp/thrift/model_predict_constants.cpp
+        src/main/cpp/thrift/model_predict_types.cpp
+        src/main/cpp/thrift/ModelPredictService_server.skeleton.cpp
+        src/main/cpp/thrift/ModelPredictService.cpp
+        src/main/cpp/thrift/nx_adp_constants.cpp
+        src/main/cpp/thrift/nx_adp_types.cpp
         )
 
 link_directories(
