@@ -12,18 +12,21 @@ using namespace ::xnad::ml;
 #ifndef MODEL_PREDICT_SERVICE
 #define MODEL_PREDICT_SERVICE
 
+class ModelPredictServiceHandler : virtual public ModelPredictServiceIf
+{
+public:
+  ModelPredictServiceHandler();
+  void predictPb(std::string &_return, const std::string &model_key, const std::string &request_msg);
 
+  void convertPb(PredictRequest &request, vector<map<string, string>> &ret);
 
-class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
- public:
-  ModelPredictServiceHandler() ;
-  void predictPb(std::string& _return , const std::string& model_key , const std::string& request_msg);
+  double predict(const std::map<std::string, std::string> &row);
 
-  void convertPb(PredictRequest & request,vector<map<string,string>>  &ret);
+  void predictList(std::vector<double> &_return, const std::vector<std::map<std::string, std::string>> &rows);
 
-  double predict(const std::map<std::string, std::string> & row);
+  void get_model_versions(std::map<std::string, std::string> &_return);
 
-    void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows);
+  void update_model(const std::string &model_key, const std::string &model_dir_path);
 };
 
 #endif

@@ -25,6 +25,8 @@ class ModelPredictServiceIf {
   virtual void predictPb(std::string& _return, const std::string& model_key, const std::string& request_msg) = 0;
   virtual double predict(const std::map<std::string, std::string> & row) = 0;
   virtual void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows) = 0;
+  virtual void get_model_versions(std::map<std::string, std::string> & _return) = 0;
+  virtual void update_model(const std::string& model_key, const std::string& model_dir_path) = 0;
 };
 
 class ModelPredictServiceIfFactory {
@@ -62,6 +64,12 @@ class ModelPredictServiceNull : virtual public ModelPredictServiceIf {
     return _return;
   }
   void predictList(std::vector<double> & /* _return */, const std::vector<std::map<std::string, std::string> > & /* rows */) {
+    return;
+  }
+  void get_model_versions(std::map<std::string, std::string> & /* _return */) {
+    return;
+  }
+  void update_model(const std::string& /* model_key */, const std::string& /* model_dir_path */) {
     return;
   }
 };
@@ -385,6 +393,191 @@ class ModelPredictService_predictList_presult {
 
 };
 
+
+class ModelPredictService_get_model_versions_args {
+ public:
+
+  ModelPredictService_get_model_versions_args(const ModelPredictService_get_model_versions_args&);
+  ModelPredictService_get_model_versions_args& operator=(const ModelPredictService_get_model_versions_args&);
+  ModelPredictService_get_model_versions_args() {
+  }
+
+  virtual ~ModelPredictService_get_model_versions_args() noexcept;
+
+  bool operator == (const ModelPredictService_get_model_versions_args & /* rhs */) const
+  {
+    return true;
+  }
+  bool operator != (const ModelPredictService_get_model_versions_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const ModelPredictService_get_model_versions_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class ModelPredictService_get_model_versions_pargs {
+ public:
+
+
+  virtual ~ModelPredictService_get_model_versions_pargs() noexcept;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _ModelPredictService_get_model_versions_result__isset {
+  _ModelPredictService_get_model_versions_result__isset() : success(false) {}
+  bool success :1;
+} _ModelPredictService_get_model_versions_result__isset;
+
+class ModelPredictService_get_model_versions_result {
+ public:
+
+  ModelPredictService_get_model_versions_result(const ModelPredictService_get_model_versions_result&);
+  ModelPredictService_get_model_versions_result& operator=(const ModelPredictService_get_model_versions_result&);
+  ModelPredictService_get_model_versions_result() {
+  }
+
+  virtual ~ModelPredictService_get_model_versions_result() noexcept;
+  std::map<std::string, std::string>  success;
+
+  _ModelPredictService_get_model_versions_result__isset __isset;
+
+  void __set_success(const std::map<std::string, std::string> & val);
+
+  bool operator == (const ModelPredictService_get_model_versions_result & rhs) const
+  {
+    if (!(success == rhs.success))
+      return false;
+    return true;
+  }
+  bool operator != (const ModelPredictService_get_model_versions_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const ModelPredictService_get_model_versions_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+typedef struct _ModelPredictService_get_model_versions_presult__isset {
+  _ModelPredictService_get_model_versions_presult__isset() : success(false) {}
+  bool success :1;
+} _ModelPredictService_get_model_versions_presult__isset;
+
+class ModelPredictService_get_model_versions_presult {
+ public:
+
+
+  virtual ~ModelPredictService_get_model_versions_presult() noexcept;
+  std::map<std::string, std::string> * success;
+
+  _ModelPredictService_get_model_versions_presult__isset __isset;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
+typedef struct _ModelPredictService_update_model_args__isset {
+  _ModelPredictService_update_model_args__isset() : model_key(false), model_dir_path(false) {}
+  bool model_key :1;
+  bool model_dir_path :1;
+} _ModelPredictService_update_model_args__isset;
+
+class ModelPredictService_update_model_args {
+ public:
+
+  ModelPredictService_update_model_args(const ModelPredictService_update_model_args&);
+  ModelPredictService_update_model_args& operator=(const ModelPredictService_update_model_args&);
+  ModelPredictService_update_model_args() : model_key(), model_dir_path() {
+  }
+
+  virtual ~ModelPredictService_update_model_args() noexcept;
+  std::string model_key;
+  std::string model_dir_path;
+
+  _ModelPredictService_update_model_args__isset __isset;
+
+  void __set_model_key(const std::string& val);
+
+  void __set_model_dir_path(const std::string& val);
+
+  bool operator == (const ModelPredictService_update_model_args & rhs) const
+  {
+    if (!(model_key == rhs.model_key))
+      return false;
+    if (!(model_dir_path == rhs.model_dir_path))
+      return false;
+    return true;
+  }
+  bool operator != (const ModelPredictService_update_model_args &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const ModelPredictService_update_model_args & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class ModelPredictService_update_model_pargs {
+ public:
+
+
+  virtual ~ModelPredictService_update_model_pargs() noexcept;
+  const std::string* model_key;
+  const std::string* model_dir_path;
+
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class ModelPredictService_update_model_result {
+ public:
+
+  ModelPredictService_update_model_result(const ModelPredictService_update_model_result&);
+  ModelPredictService_update_model_result& operator=(const ModelPredictService_update_model_result&);
+  ModelPredictService_update_model_result() {
+  }
+
+  virtual ~ModelPredictService_update_model_result() noexcept;
+
+  bool operator == (const ModelPredictService_update_model_result & /* rhs */) const
+  {
+    return true;
+  }
+  bool operator != (const ModelPredictService_update_model_result &rhs) const {
+    return !(*this == rhs);
+  }
+
+  bool operator < (const ModelPredictService_update_model_result & ) const;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+  uint32_t write(::apache::thrift::protocol::TProtocol* oprot) const;
+
+};
+
+
+class ModelPredictService_update_model_presult {
+ public:
+
+
+  virtual ~ModelPredictService_update_model_presult() noexcept;
+
+  uint32_t read(::apache::thrift::protocol::TProtocol* iprot);
+
+};
+
 class ModelPredictServiceClient : virtual public ModelPredictServiceIf {
  public:
   ModelPredictServiceClient(std::shared_ptr< ::apache::thrift::protocol::TProtocol> prot) {
@@ -419,6 +612,12 @@ class ModelPredictServiceClient : virtual public ModelPredictServiceIf {
   void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows);
   void send_predictList(const std::vector<std::map<std::string, std::string> > & rows);
   void recv_predictList(std::vector<double> & _return);
+  void get_model_versions(std::map<std::string, std::string> & _return);
+  void send_get_model_versions();
+  void recv_get_model_versions(std::map<std::string, std::string> & _return);
+  void update_model(const std::string& model_key, const std::string& model_dir_path);
+  void send_update_model(const std::string& model_key, const std::string& model_dir_path);
+  void recv_update_model();
  protected:
   std::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
   std::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;
@@ -437,12 +636,16 @@ class ModelPredictServiceProcessor : public ::apache::thrift::TDispatchProcessor
   void process_predictPb(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
   void process_predict(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
   void process_predictList(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_get_model_versions(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
+  void process_update_model(int32_t seqid, ::apache::thrift::protocol::TProtocol* iprot, ::apache::thrift::protocol::TProtocol* oprot, void* callContext);
  public:
   ModelPredictServiceProcessor(::std::shared_ptr<ModelPredictServiceIf> iface) :
     iface_(iface) {
     processMap_["predictPb"] = &ModelPredictServiceProcessor::process_predictPb;
     processMap_["predict"] = &ModelPredictServiceProcessor::process_predict;
     processMap_["predictList"] = &ModelPredictServiceProcessor::process_predictList;
+    processMap_["get_model_versions"] = &ModelPredictServiceProcessor::process_get_model_versions;
+    processMap_["update_model"] = &ModelPredictServiceProcessor::process_update_model;
   }
 
   virtual ~ModelPredictServiceProcessor() {}
@@ -500,6 +703,25 @@ class ModelPredictServiceMultiface : virtual public ModelPredictServiceIf {
     return;
   }
 
+  void get_model_versions(std::map<std::string, std::string> & _return) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->get_model_versions(_return);
+    }
+    ifaces_[i]->get_model_versions(_return);
+    return;
+  }
+
+  void update_model(const std::string& model_key, const std::string& model_dir_path) {
+    size_t sz = ifaces_.size();
+    size_t i = 0;
+    for (; i < (sz - 1); ++i) {
+      ifaces_[i]->update_model(model_key, model_dir_path);
+    }
+    ifaces_[i]->update_model(model_key, model_dir_path);
+  }
+
 };
 
 // The 'concurrent' client is a thread safe client that correctly handles
@@ -541,6 +763,12 @@ class ModelPredictServiceConcurrentClient : virtual public ModelPredictServiceIf
   void predictList(std::vector<double> & _return, const std::vector<std::map<std::string, std::string> > & rows);
   int32_t send_predictList(const std::vector<std::map<std::string, std::string> > & rows);
   void recv_predictList(std::vector<double> & _return, const int32_t seqid);
+  void get_model_versions(std::map<std::string, std::string> & _return);
+  int32_t send_get_model_versions();
+  void recv_get_model_versions(std::map<std::string, std::string> & _return, const int32_t seqid);
+  void update_model(const std::string& model_key, const std::string& model_dir_path);
+  int32_t send_update_model(const std::string& model_key, const std::string& model_dir_path);
+  void recv_update_model(const int32_t seqid);
  protected:
   std::shared_ptr< ::apache::thrift::protocol::TProtocol> piprot_;
   std::shared_ptr< ::apache::thrift::protocol::TProtocol> poprot_;

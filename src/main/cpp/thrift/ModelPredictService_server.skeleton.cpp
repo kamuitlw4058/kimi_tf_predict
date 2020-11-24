@@ -33,6 +33,16 @@ class ModelPredictServiceHandler : virtual public ModelPredictServiceIf {
     printf("predictList\n");
   }
 
+  void get_model_versions(std::map<std::string, std::string> & _return) {
+    // Your implementation goes here
+    printf("get_model_versions\n");
+  }
+
+  void update_model(const std::string& model_key, const std::string& model_dir_path) {
+    // Your implementation goes here
+    printf("update_model\n");
+  }
+
 };
 
 int main(int argc, char **argv) {

@@ -1,1 +1,0 @@
-{"dim": 5, "indexer": {"User_Age": [{"name": "User_Age", "opt": "one-hot", "index": {"10": 0, "20": 1}}], "Device_Os": [{"name": "Device_Os", "opt": "one-hot", "index": {"ios": 2, "android": 3}}], "Slot_Width": [{"name": "Slot_Width", "opt": "scaler", "index": 4, "mean": 17.6, "std": 19.308029417835474}]}}
