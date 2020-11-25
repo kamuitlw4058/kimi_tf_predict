@@ -15,10 +15,10 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_tracking_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BidRequest_tracking_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ml_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CandidateAd_ml_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ml_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PredictResult_ml_2eproto;
-namespace xnad {
-namespace ml {
+namespace xn_adp {
 class CandidateAdDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CandidateAd> _instance;
@@ -35,17 +35,16 @@ class PredictResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PredictResponse> _instance;
 } _PredictResponse_default_instance_;
-}  // namespace ml
-}  // namespace xnad
+}  // namespace xn_adp
 static void InitDefaultsscc_info_CandidateAd_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xnad::ml::_CandidateAd_default_instance_;
-    new (ptr) ::xnad::ml::CandidateAd();
+    void* ptr = &::xn_adp::_CandidateAd_default_instance_;
+    new (ptr) ::xn_adp::CandidateAd();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xnad::ml::CandidateAd::InitAsDefaultInstance();
+  ::xn_adp::CandidateAd::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CandidateAd_ml_2eproto =
@@ -55,26 +54,27 @@ static void InitDefaultsscc_info_PredictRequest_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xnad::ml::_PredictRequest_default_instance_;
-    new (ptr) ::xnad::ml::PredictRequest();
+    void* ptr = &::xn_adp::_PredictRequest_default_instance_;
+    new (ptr) ::xn_adp::PredictRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xnad::ml::PredictRequest::InitAsDefaultInstance();
+  ::xn_adp::PredictRequest::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PredictRequest_ml_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_PredictRequest_ml_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PredictRequest_ml_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_PredictRequest_ml_2eproto}, {
+      &scc_info_BidRequest_tracking_2eproto.base,
       &scc_info_CandidateAd_ml_2eproto.base,}};
 
 static void InitDefaultsscc_info_PredictResponse_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xnad::ml::_PredictResponse_default_instance_;
-    new (ptr) ::xnad::ml::PredictResponse();
+    void* ptr = &::xn_adp::_PredictResponse_default_instance_;
+    new (ptr) ::xn_adp::PredictResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xnad::ml::PredictResponse::InitAsDefaultInstance();
+  ::xn_adp::PredictResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PredictResponse_ml_2eproto =
@@ -85,11 +85,11 @@ static void InitDefaultsscc_info_PredictResult_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xnad::ml::_PredictResult_default_instance_;
-    new (ptr) ::xnad::ml::PredictResult();
+    void* ptr = &::xn_adp::_PredictResult_default_instance_;
+    new (ptr) ::xn_adp::PredictResult();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xnad::ml::PredictResult::InitAsDefaultInstance();
+  ::xn_adp::PredictResult::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PredictResult_ml_2eproto =
@@ -101,99 +101,69 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ml_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, planid_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, campid_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, advid_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, landingtype_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, imptype_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, actiontype_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::CandidateAd, category_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, planid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, campid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, advid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, landingtype_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, actiontype_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, category_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, pub_id_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, app_id_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, placement_id_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, imp_type_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, app_pkg_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, app_name_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, w_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, h_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, app_ver_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, os_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, osv_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, brand_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, model_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, devtype_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, ppi_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, sdk_ver_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, orientation_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, operator__),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, conn_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, ip_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, province_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, city_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, carrier_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictRequest, ads_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictRequest, bidreq_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictRequest, ads_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResult, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResult, planid_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResult, pctr_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResult, pcvr_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, planid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, pctr_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, pcvr_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResponse, code_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResponse, msg_),
-  PROTOBUF_FIELD_OFFSET(::xnad::ml::PredictResponse, data_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, code_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, msg_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::xnad::ml::CandidateAd)},
-  { 12, -1, sizeof(::xnad::ml::PredictRequest)},
-  { 41, -1, sizeof(::xnad::ml::PredictResult)},
-  { 49, -1, sizeof(::xnad::ml::PredictResponse)},
+  { 0, -1, sizeof(::xn_adp::CandidateAd)},
+  { 11, -1, sizeof(::xn_adp::PredictRequest)},
+  { 18, -1, sizeof(::xn_adp::PredictResult)},
+  { 26, -1, sizeof(::xn_adp::PredictResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xnad::ml::_CandidateAd_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xnad::ml::_PredictRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xnad::ml::_PredictResult_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xnad::ml::_PredictResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_CandidateAd_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_PredictRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_PredictResult_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_PredictResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_ml_2eproto[] =
-  "\n\010ml.proto\022\007xnad.ml\"\210\001\n\013CandidateAd\022\016\n\006p"
-  "lanid\030\001 \001(\005\022\016\n\006campid\030\002 \001(\005\022\r\n\005advid\030\003 \001"
-  "(\005\022\023\n\013landingtype\030\004 \001(\005\022\017\n\007imptype\030\005 \001(\005"
-  "\022\022\n\nactiontype\030\006 \001(\005\022\020\n\010category\030\007 \001(\t\"\235"
-  "\003\n\016PredictRequest\022\016\n\006pub_id\030\001 \001(\005\022\016\n\006app"
-  "_id\030\002 \001(\005\022\024\n\014placement_id\030\003 \001(\005\022\020\n\010imp_t"
-  "ype\030\004 \001(\005\022\017\n\007app_pkg\030\005 \001(\t\022\020\n\010app_name\030\006"
-  " \001(\t\022\t\n\001w\030\007 \001(\005\022\t\n\001h\030\010 \001(\005\022\017\n\007app_ver\030\t "
-  "\001(\t\022\n\n\002os\030\n \001(\005\022\013\n\003osv\030\013 \001(\t\022\r\n\005brand\030\014 "
-  "\001(\t\022\r\n\005model\030\r \001(\t\022\017\n\007devtype\030\016 \001(\005\022\013\n\003p"
-  "pi\030\017 \001(\005\022\017\n\007sdk_ver\030\020 \001(\t\022\023\n\013orientation"
-  "\030\025 \001(\005\022\020\n\010operator\030\030 \001(\t\022\014\n\004conn\030\031 \001(\005\022\n"
-  "\n\002ip\030\032 \001(\t\022\020\n\010province\030\033 \001(\t\022\014\n\004city\030\034 \001"
-  "(\t\022\017\n\007carrier\030\035 \001(\t\022!\n\003ads\030\036 \003(\0132\024.xnad."
-  "ml.CandidateAd\";\n\rPredictResult\022\016\n\006plani"
-  "d\030\001 \001(\005\022\014\n\004pctr\030\002 \001(\005\022\014\n\004pcvr\030\003 \001(\005\"R\n\017P"
-  "redictResponse\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001("
-  "\t\022$\n\004data\030\003 \003(\0132\026.xnad.ml.PredictResultb"
-  "\006proto3"
+  "\n\010ml.proto\022\006xn_adp\032\016tracking.proto\"w\n\013Ca"
+  "ndidateAd\022\016\n\006planid\030\001 \001(\005\022\016\n\006campid\030\002 \001("
+  "\005\022\r\n\005advid\030\003 \001(\005\022\023\n\013landingtype\030\004 \001(\005\022\022\n"
+  "\nactiontype\030\006 \001(\005\022\020\n\010category\030\007 \001(\t\"V\n\016P"
+  "redictRequest\022\"\n\006bidreq\030\001 \001(\0132\022.xn_adp.B"
+  "idRequest\022 \n\003ads\030\002 \003(\0132\023.xn_adp.Candidat"
+  "eAd\";\n\rPredictResult\022\016\n\006planid\030\001 \001(\005\022\014\n\004"
+  "pctr\030\002 \001(\005\022\014\n\004pcvr\030\003 \001(\005\"Q\n\017PredictRespo"
+  "nse\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\022#\n\004data\030\003"
+  " \003(\0132\025.xn_adp.PredictResultB\033\n\027com.xiaon"
+  "iuhy.adp.pb.mlP\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ml_2eproto_deps[1] = {
+  &::descriptor_table_tracking_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ml_2eproto_sccs[4] = {
   &scc_info_CandidateAd_ml_2eproto.base,
@@ -204,16 +174,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ml_
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ml_2eproto_once;
 static bool descriptor_table_ml_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ml_2eproto = {
-  &descriptor_table_ml_2eproto_initialized, descriptor_table_protodef_ml_2eproto, "ml.proto", 727,
-  &descriptor_table_ml_2eproto_once, descriptor_table_ml_2eproto_sccs, descriptor_table_ml_2eproto_deps, 4, 0,
+  &descriptor_table_ml_2eproto_initialized, descriptor_table_protodef_ml_2eproto, "ml.proto", 424,
+  &descriptor_table_ml_2eproto_once, descriptor_table_ml_2eproto_sccs, descriptor_table_ml_2eproto_deps, 4, 1,
   schemas, file_default_instances, TableStruct_ml_2eproto::offsets,
   file_level_metadata_ml_2eproto, 4, file_level_enum_descriptors_ml_2eproto, file_level_service_descriptors_ml_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_ml_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ml_2eproto), true);
-namespace xnad {
-namespace ml {
+namespace xn_adp {
 
 // ===================================================================
 
@@ -228,7 +197,6 @@ const int CandidateAd::kPlanidFieldNumber;
 const int CandidateAd::kCampidFieldNumber;
 const int CandidateAd::kAdvidFieldNumber;
 const int CandidateAd::kLandingtypeFieldNumber;
-const int CandidateAd::kImptypeFieldNumber;
 const int CandidateAd::kActiontypeFieldNumber;
 const int CandidateAd::kCategoryFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -236,7 +204,7 @@ const int CandidateAd::kCategoryFieldNumber;
 CandidateAd::CandidateAd()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(constructor:xn_adp.CandidateAd)
 }
 CandidateAd::CandidateAd(const CandidateAd& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -249,7 +217,7 @@ CandidateAd::CandidateAd(const CandidateAd& from)
   ::memcpy(&planid_, &from.planid_,
     static_cast<size_t>(reinterpret_cast<char*>(&actiontype_) -
     reinterpret_cast<char*>(&planid_)) + sizeof(actiontype_));
-  // @@protoc_insertion_point(copy_constructor:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.CandidateAd)
 }
 
 void CandidateAd::SharedCtor() {
@@ -261,7 +229,7 @@ void CandidateAd::SharedCtor() {
 }
 
 CandidateAd::~CandidateAd() {
-  // @@protoc_insertion_point(destructor:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(destructor:xn_adp.CandidateAd)
   SharedDtor();
 }
 
@@ -279,7 +247,7 @@ const CandidateAd& CandidateAd::default_instance() {
 
 
 void CandidateAd::Clear() {
-// @@protoc_insertion_point(message_clear_start:xnad.ml.CandidateAd)
+// @@protoc_insertion_point(message_clear_start:xn_adp.CandidateAd)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -327,13 +295,6 @@ const char* CandidateAd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 imptype = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          imptype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
       // int32 actiontype = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
@@ -344,7 +305,7 @@ const char* CandidateAd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // string category = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_category(), ptr, ctx, "xnad.ml.CandidateAd.category");
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_category(), ptr, ctx, "xn_adp.CandidateAd.category");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -372,7 +333,7 @@ bool CandidateAd::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(parse_start:xn_adp.CandidateAd)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -430,19 +391,6 @@ bool CandidateAd::MergePartialFromCodedStream(
         break;
       }
 
-      // int32 imptype = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (40 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &imptype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // int32 actiontype = 6;
       case 6: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (48 & 0xFF)) {
@@ -464,7 +412,7 @@ bool CandidateAd::MergePartialFromCodedStream(
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             this->category().data(), static_cast<int>(this->category().length()),
             ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.CandidateAd.category"));
+            "xn_adp.CandidateAd.category"));
         } else {
           goto handle_unusual;
         }
@@ -483,10 +431,10 @@ bool CandidateAd::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(parse_success:xn_adp.CandidateAd)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(parse_failure:xn_adp.CandidateAd)
   return false;
 #undef DO_
 }
@@ -494,7 +442,7 @@ failure:
 
 void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(serialize_start:xn_adp.CandidateAd)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -518,11 +466,6 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->landingtype(), output);
   }
 
-  // int32 imptype = 5;
-  if (this->imptype() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(5, this->imptype(), output);
-  }
-
   // int32 actiontype = 6;
   if (this->actiontype() != 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(6, this->actiontype(), output);
@@ -533,7 +476,7 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->category().data(), static_cast<int>(this->category().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.CandidateAd.category");
+      "xn_adp.CandidateAd.category");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
       7, this->category(), output);
   }
@@ -542,12 +485,12 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(serialize_end:xn_adp.CandidateAd)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* CandidateAd::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.CandidateAd)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -571,11 +514,6 @@ void CandidateAd::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->landingtype(), target);
   }
 
-  // int32 imptype = 5;
-  if (this->imptype() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->imptype(), target);
-  }
-
   // int32 actiontype = 6;
   if (this->actiontype() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->actiontype(), target);
@@ -586,7 +524,7 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->category().data(), static_cast<int>(this->category().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.CandidateAd.category");
+      "xn_adp.CandidateAd.category");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
         7, this->category(), target);
@@ -596,12 +534,12 @@ void CandidateAd::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.CandidateAd)
   return target;
 }
 
 size_t CandidateAd::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xnad.ml.CandidateAd)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.CandidateAd)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -648,13 +586,6 @@ size_t CandidateAd::ByteSizeLong() const {
         this->landingtype());
   }
 
-  // int32 imptype = 5;
-  if (this->imptype() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->imptype());
-  }
-
   // int32 actiontype = 6;
   if (this->actiontype() != 0) {
     total_size += 1 +
@@ -668,22 +599,22 @@ size_t CandidateAd::ByteSizeLong() const {
 }
 
 void CandidateAd::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xnad.ml.CandidateAd)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.CandidateAd)
   GOOGLE_DCHECK_NE(&from, this);
   const CandidateAd* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CandidateAd>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.CandidateAd)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xnad.ml.CandidateAd)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.CandidateAd)
     MergeFrom(*source);
   }
 }
 
 void CandidateAd::MergeFrom(const CandidateAd& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xnad.ml.CandidateAd)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.CandidateAd)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -705,23 +636,20 @@ void CandidateAd::MergeFrom(const CandidateAd& from) {
   if (from.landingtype() != 0) {
     set_landingtype(from.landingtype());
   }
-  if (from.imptype() != 0) {
-    set_imptype(from.imptype());
-  }
   if (from.actiontype() != 0) {
     set_actiontype(from.actiontype());
   }
 }
 
 void CandidateAd::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xnad.ml.CandidateAd)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.CandidateAd)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void CandidateAd::CopyFrom(const CandidateAd& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xnad.ml.CandidateAd)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.CandidateAd)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -744,7 +672,6 @@ void CandidateAd::InternalSwap(CandidateAd* other) {
   swap(campid_, other->campid_);
   swap(advid_, other->advid_);
   swap(landingtype_, other->landingtype_);
-  swap(imptype_, other->imptype_);
   swap(actiontype_, other->actiontype_);
 }
 
@@ -756,139 +683,59 @@ void CandidateAd::InternalSwap(CandidateAd* other) {
 // ===================================================================
 
 void PredictRequest::InitAsDefaultInstance() {
+  ::xn_adp::_PredictRequest_default_instance_._instance.get_mutable()->bidreq_ = const_cast< ::xn_adp::BidRequest*>(
+      ::xn_adp::BidRequest::internal_default_instance());
 }
 class PredictRequest::HasBitSetters {
  public:
+  static const ::xn_adp::BidRequest& bidreq(const PredictRequest* msg);
 };
 
+const ::xn_adp::BidRequest&
+PredictRequest::HasBitSetters::bidreq(const PredictRequest* msg) {
+  return *msg->bidreq_;
+}
+void PredictRequest::clear_bidreq() {
+  if (GetArenaNoVirtual() == nullptr && bidreq_ != nullptr) {
+    delete bidreq_;
+  }
+  bidreq_ = nullptr;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PredictRequest::kPubIdFieldNumber;
-const int PredictRequest::kAppIdFieldNumber;
-const int PredictRequest::kPlacementIdFieldNumber;
-const int PredictRequest::kImpTypeFieldNumber;
-const int PredictRequest::kAppPkgFieldNumber;
-const int PredictRequest::kAppNameFieldNumber;
-const int PredictRequest::kWFieldNumber;
-const int PredictRequest::kHFieldNumber;
-const int PredictRequest::kAppVerFieldNumber;
-const int PredictRequest::kOsFieldNumber;
-const int PredictRequest::kOsvFieldNumber;
-const int PredictRequest::kBrandFieldNumber;
-const int PredictRequest::kModelFieldNumber;
-const int PredictRequest::kDevtypeFieldNumber;
-const int PredictRequest::kPpiFieldNumber;
-const int PredictRequest::kSdkVerFieldNumber;
-const int PredictRequest::kOrientationFieldNumber;
-const int PredictRequest::kOperatorFieldNumber;
-const int PredictRequest::kConnFieldNumber;
-const int PredictRequest::kIpFieldNumber;
-const int PredictRequest::kProvinceFieldNumber;
-const int PredictRequest::kCityFieldNumber;
-const int PredictRequest::kCarrierFieldNumber;
+const int PredictRequest::kBidreqFieldNumber;
 const int PredictRequest::kAdsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 PredictRequest::PredictRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(constructor:xn_adp.PredictRequest)
 }
 PredictRequest::PredictRequest(const PredictRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
       ads_(from.ads_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  app_pkg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.app_pkg().size() > 0) {
-    app_pkg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_pkg_);
+  if (from.has_bidreq()) {
+    bidreq_ = new ::xn_adp::BidRequest(*from.bidreq_);
+  } else {
+    bidreq_ = nullptr;
   }
-  app_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.app_name().size() > 0) {
-    app_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_name_);
-  }
-  app_ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.app_ver().size() > 0) {
-    app_ver_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_ver_);
-  }
-  osv_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.osv().size() > 0) {
-    osv_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.osv_);
-  }
-  brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.brand().size() > 0) {
-    brand_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.brand_);
-  }
-  model_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.model().size() > 0) {
-    model_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.model_);
-  }
-  sdk_ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.sdk_ver().size() > 0) {
-    sdk_ver_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.sdk_ver_);
-  }
-  operator__.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.operator_().size() > 0) {
-    operator__.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.operator__);
-  }
-  ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.ip().size() > 0) {
-    ip_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.ip_);
-  }
-  province_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.province().size() > 0) {
-    province_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.province_);
-  }
-  city_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.city().size() > 0) {
-    city_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.city_);
-  }
-  carrier_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.carrier().size() > 0) {
-    carrier_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.carrier_);
-  }
-  ::memcpy(&pub_id_, &from.pub_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&conn_) -
-    reinterpret_cast<char*>(&pub_id_)) + sizeof(conn_));
-  // @@protoc_insertion_point(copy_constructor:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.PredictRequest)
 }
 
 void PredictRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PredictRequest_ml_2eproto.base);
-  app_pkg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  app_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  app_ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  osv_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  model_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sdk_ver_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  operator__.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ip_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  province_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  city_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  carrier_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&pub_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&conn_) -
-      reinterpret_cast<char*>(&pub_id_)) + sizeof(conn_));
+  bidreq_ = nullptr;
 }
 
 PredictRequest::~PredictRequest() {
-  // @@protoc_insertion_point(destructor:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(destructor:xn_adp.PredictRequest)
   SharedDtor();
 }
 
 void PredictRequest::SharedDtor() {
-  app_pkg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  app_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  app_ver_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  osv_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  brand_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  model_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sdk_ver_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  operator__.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ip_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  province_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  city_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  carrier_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete bidreq_;
 }
 
 void PredictRequest::SetCachedSize(int size) const {
@@ -901,27 +748,16 @@ const PredictRequest& PredictRequest::default_instance() {
 
 
 void PredictRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:xnad.ml.PredictRequest)
+// @@protoc_insertion_point(message_clear_start:xn_adp.PredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   ads_.Clear();
-  app_pkg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  app_name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  app_ver_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  osv_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  brand_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  model_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sdk_ver_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  operator__.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ip_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  province_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  city_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  carrier_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&pub_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&conn_) -
-      reinterpret_cast<char*>(&pub_id_)) + sizeof(conn_));
+  if (GetArenaNoVirtual() == nullptr && bidreq_ != nullptr) {
+    delete bidreq_;
+  }
+  bidreq_ = nullptr;
   _internal_metadata_.Clear();
 }
 
@@ -933,177 +769,23 @@ const char* PredictRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int32 pub_id = 1;
+      // .xn_adp.BidRequest bidreq = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          pub_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_bidreq(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 app_id = 2;
+      // repeated .xn_adp.CandidateAd ads = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          app_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 placement_id = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          placement_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 imp_type = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          imp_type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string app_pkg = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_app_pkg(), ptr, ctx, "xnad.ml.PredictRequest.app_pkg");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string app_name = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_app_name(), ptr, ctx, "xnad.ml.PredictRequest.app_name");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 w = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
-          w_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 h = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
-          h_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string app_ver = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_app_ver(), ptr, ctx, "xnad.ml.PredictRequest.app_ver");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 os = 10;
-      case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
-          os_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string osv = 11;
-      case 11:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_osv(), ptr, ctx, "xnad.ml.PredictRequest.osv");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string brand = 12;
-      case 12:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_brand(), ptr, ctx, "xnad.ml.PredictRequest.brand");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string model = 13;
-      case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_model(), ptr, ctx, "xnad.ml.PredictRequest.model");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 devtype = 14;
-      case 14:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 112)) {
-          devtype_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 ppi = 15;
-      case 15:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 120)) {
-          ppi_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string sdk_ver = 16;
-      case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_sdk_ver(), ptr, ctx, "xnad.ml.PredictRequest.sdk_ver");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 orientation = 21;
-      case 21:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 168)) {
-          orientation_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string operator = 24;
-      case 24:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 194)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_operator_(), ptr, ctx, "xnad.ml.PredictRequest.operator");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 conn = 25;
-      case 25:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 200)) {
-          conn_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string ip = 26;
-      case 26:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 210)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_ip(), ptr, ctx, "xnad.ml.PredictRequest.ip");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string province = 27;
-      case 27:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 218)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_province(), ptr, ctx, "xnad.ml.PredictRequest.province");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string city = 28;
-      case 28:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 226)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_city(), ptr, ctx, "xnad.ml.PredictRequest.city");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string carrier = 29;
-      case 29:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 234)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_carrier(), ptr, ctx, "xnad.ml.PredictRequest.carrier");
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated .xnad.ml.CandidateAd ads = 30;
-      case 30:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 242)) {
-          ptr -= 2;
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
           do {
-            ptr += 2;
+            ptr += 1;
             ptr = ctx->ParseMessage(add_ads(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint16>(ptr) == 498);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
         } else goto handle_unusual;
         continue;
       default: {
@@ -1130,338 +812,26 @@ bool PredictRequest::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(parse_start:xn_adp.PredictRequest)
   for (;;) {
-    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 pub_id = 1;
+      // .xn_adp.BidRequest bidreq = 1;
       case 1: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &pub_id_)));
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_bidreq()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // int32 app_id = 2;
+      // repeated .xn_adp.CandidateAd ads = 2;
       case 2: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (16 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &app_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 placement_id = 3;
-      case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &placement_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 imp_type = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &imp_type_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string app_pkg = 5;
-      case 5: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_app_pkg()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->app_pkg().data(), static_cast<int>(this->app_pkg().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.app_pkg"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string app_name = 6;
-      case 6: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_app_name()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->app_name().data(), static_cast<int>(this->app_name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.app_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 w = 7;
-      case 7: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (56 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &w_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 h = 8;
-      case 8: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (64 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &h_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string app_ver = 9;
-      case 9: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (74 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_app_ver()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->app_ver().data(), static_cast<int>(this->app_ver().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.app_ver"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 os = 10;
-      case 10: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (80 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &os_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string osv = 11;
-      case 11: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (90 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_osv()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->osv().data(), static_cast<int>(this->osv().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.osv"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string brand = 12;
-      case 12: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (98 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_brand()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->brand().data(), static_cast<int>(this->brand().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.brand"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string model = 13;
-      case 13: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_model()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->model().data(), static_cast<int>(this->model().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.model"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 devtype = 14;
-      case 14: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (112 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &devtype_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 ppi = 15;
-      case 15: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (120 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &ppi_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string sdk_ver = 16;
-      case 16: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (130 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_sdk_ver()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->sdk_ver().data(), static_cast<int>(this->sdk_ver().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.sdk_ver"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 orientation = 21;
-      case 21: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (168 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &orientation_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string operator = 24;
-      case 24: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (194 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_operator_()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->operator_().data(), static_cast<int>(this->operator_().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.operator"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 conn = 25;
-      case 25: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (200 & 0xFF)) {
-
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &conn_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string ip = 26;
-      case 26: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (210 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_ip()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->ip().data(), static_cast<int>(this->ip().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.ip"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string province = 27;
-      case 27: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (218 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_province()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->province().data(), static_cast<int>(this->province().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.province"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string city = 28;
-      case 28: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (226 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_city()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->city().data(), static_cast<int>(this->city().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.city"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string carrier = 29;
-      case 29: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (234 & 0xFF)) {
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
-                input, this->mutable_carrier()));
-          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-            this->carrier().data(), static_cast<int>(this->carrier().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictRequest.carrier"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .xnad.ml.CandidateAd ads = 30;
-      case 30: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (242 & 0xFF)) {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                 input, add_ads()));
         } else {
@@ -1482,10 +852,10 @@ bool PredictRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(parse_success:xn_adp.PredictRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(parse_failure:xn_adp.PredictRequest)
   return false;
 #undef DO_
 }
@@ -1493,190 +863,21 @@ failure:
 
 void PredictRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(serialize_start:xn_adp.PredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 pub_id = 1;
-  if (this->pub_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->pub_id(), output);
+  // .xn_adp.BidRequest bidreq = 1;
+  if (this->has_bidreq()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::bidreq(this), output);
   }
 
-  // int32 app_id = 2;
-  if (this->app_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(2, this->app_id(), output);
-  }
-
-  // int32 placement_id = 3;
-  if (this->placement_id() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->placement_id(), output);
-  }
-
-  // int32 imp_type = 4;
-  if (this->imp_type() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(4, this->imp_type(), output);
-  }
-
-  // string app_pkg = 5;
-  if (this->app_pkg().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_pkg().data(), static_cast<int>(this->app_pkg().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.app_pkg");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->app_pkg(), output);
-  }
-
-  // string app_name = 6;
-  if (this->app_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_name().data(), static_cast<int>(this->app_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.app_name");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->app_name(), output);
-  }
-
-  // int32 w = 7;
-  if (this->w() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(7, this->w(), output);
-  }
-
-  // int32 h = 8;
-  if (this->h() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(8, this->h(), output);
-  }
-
-  // string app_ver = 9;
-  if (this->app_ver().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_ver().data(), static_cast<int>(this->app_ver().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.app_ver");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->app_ver(), output);
-  }
-
-  // int32 os = 10;
-  if (this->os() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(10, this->os(), output);
-  }
-
-  // string osv = 11;
-  if (this->osv().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->osv().data(), static_cast<int>(this->osv().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.osv");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      11, this->osv(), output);
-  }
-
-  // string brand = 12;
-  if (this->brand().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->brand().data(), static_cast<int>(this->brand().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.brand");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      12, this->brand(), output);
-  }
-
-  // string model = 13;
-  if (this->model().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->model().data(), static_cast<int>(this->model().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.model");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      13, this->model(), output);
-  }
-
-  // int32 devtype = 14;
-  if (this->devtype() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(14, this->devtype(), output);
-  }
-
-  // int32 ppi = 15;
-  if (this->ppi() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(15, this->ppi(), output);
-  }
-
-  // string sdk_ver = 16;
-  if (this->sdk_ver().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sdk_ver().data(), static_cast<int>(this->sdk_ver().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.sdk_ver");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      16, this->sdk_ver(), output);
-  }
-
-  // int32 orientation = 21;
-  if (this->orientation() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(21, this->orientation(), output);
-  }
-
-  // string operator = 24;
-  if (this->operator_().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->operator_().data(), static_cast<int>(this->operator_().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.operator");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      24, this->operator_(), output);
-  }
-
-  // int32 conn = 25;
-  if (this->conn() != 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(25, this->conn(), output);
-  }
-
-  // string ip = 26;
-  if (this->ip().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->ip().data(), static_cast<int>(this->ip().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.ip");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      26, this->ip(), output);
-  }
-
-  // string province = 27;
-  if (this->province().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->province().data(), static_cast<int>(this->province().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.province");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      27, this->province(), output);
-  }
-
-  // string city = 28;
-  if (this->city().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->city().data(), static_cast<int>(this->city().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.city");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      28, this->city(), output);
-  }
-
-  // string carrier = 29;
-  if (this->carrier().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->carrier().data(), static_cast<int>(this->carrier().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.carrier");
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
-      29, this->carrier(), output);
-  }
-
-  // repeated .xnad.ml.CandidateAd ads = 30;
+  // repeated .xn_adp.CandidateAd ads = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->ads_size()); i < n; i++) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
-      30,
+      2,
       this->ads(static_cast<int>(i)),
       output);
   }
@@ -1685,220 +886,40 @@ void PredictRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(serialize_end:xn_adp.PredictRequest)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* PredictRequest::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.PredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 pub_id = 1;
-  if (this->pub_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->pub_id(), target);
+  // .xn_adp.BidRequest bidreq = 1;
+  if (this->has_bidreq()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::bidreq(this), target);
   }
 
-  // int32 app_id = 2;
-  if (this->app_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->app_id(), target);
-  }
-
-  // int32 placement_id = 3;
-  if (this->placement_id() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->placement_id(), target);
-  }
-
-  // int32 imp_type = 4;
-  if (this->imp_type() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->imp_type(), target);
-  }
-
-  // string app_pkg = 5;
-  if (this->app_pkg().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_pkg().data(), static_cast<int>(this->app_pkg().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.app_pkg");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        5, this->app_pkg(), target);
-  }
-
-  // string app_name = 6;
-  if (this->app_name().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_name().data(), static_cast<int>(this->app_name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.app_name");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        6, this->app_name(), target);
-  }
-
-  // int32 w = 7;
-  if (this->w() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(7, this->w(), target);
-  }
-
-  // int32 h = 8;
-  if (this->h() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(8, this->h(), target);
-  }
-
-  // string app_ver = 9;
-  if (this->app_ver().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->app_ver().data(), static_cast<int>(this->app_ver().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.app_ver");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        9, this->app_ver(), target);
-  }
-
-  // int32 os = 10;
-  if (this->os() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->os(), target);
-  }
-
-  // string osv = 11;
-  if (this->osv().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->osv().data(), static_cast<int>(this->osv().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.osv");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        11, this->osv(), target);
-  }
-
-  // string brand = 12;
-  if (this->brand().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->brand().data(), static_cast<int>(this->brand().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.brand");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        12, this->brand(), target);
-  }
-
-  // string model = 13;
-  if (this->model().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->model().data(), static_cast<int>(this->model().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.model");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        13, this->model(), target);
-  }
-
-  // int32 devtype = 14;
-  if (this->devtype() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(14, this->devtype(), target);
-  }
-
-  // int32 ppi = 15;
-  if (this->ppi() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(15, this->ppi(), target);
-  }
-
-  // string sdk_ver = 16;
-  if (this->sdk_ver().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->sdk_ver().data(), static_cast<int>(this->sdk_ver().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.sdk_ver");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        16, this->sdk_ver(), target);
-  }
-
-  // int32 orientation = 21;
-  if (this->orientation() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(21, this->orientation(), target);
-  }
-
-  // string operator = 24;
-  if (this->operator_().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->operator_().data(), static_cast<int>(this->operator_().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.operator");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        24, this->operator_(), target);
-  }
-
-  // int32 conn = 25;
-  if (this->conn() != 0) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(25, this->conn(), target);
-  }
-
-  // string ip = 26;
-  if (this->ip().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->ip().data(), static_cast<int>(this->ip().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.ip");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        26, this->ip(), target);
-  }
-
-  // string province = 27;
-  if (this->province().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->province().data(), static_cast<int>(this->province().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.province");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        27, this->province(), target);
-  }
-
-  // string city = 28;
-  if (this->city().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->city().data(), static_cast<int>(this->city().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.city");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        28, this->city(), target);
-  }
-
-  // string carrier = 29;
-  if (this->carrier().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->carrier().data(), static_cast<int>(this->carrier().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictRequest.carrier");
-    target =
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
-        29, this->carrier(), target);
-  }
-
-  // repeated .xnad.ml.CandidateAd ads = 30;
+  // repeated .xn_adp.CandidateAd ads = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->ads_size()); i < n; i++) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        30, this->ads(static_cast<int>(i)), target);
+        2, this->ads(static_cast<int>(i)), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.PredictRequest)
   return target;
 }
 
 size_t PredictRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xnad.ml.PredictRequest)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.PredictRequest)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1910,10 +931,10 @@ size_t PredictRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .xnad.ml.CandidateAd ads = 30;
+  // repeated .xn_adp.CandidateAd ads = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->ads_size());
-    total_size += 2UL * count;
+    total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -1921,165 +942,11 @@ size_t PredictRequest::ByteSizeLong() const {
     }
   }
 
-  // string app_pkg = 5;
-  if (this->app_pkg().size() > 0) {
+  // .xn_adp.BidRequest bidreq = 1;
+  if (this->has_bidreq()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->app_pkg());
-  }
-
-  // string app_name = 6;
-  if (this->app_name().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->app_name());
-  }
-
-  // string app_ver = 9;
-  if (this->app_ver().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->app_ver());
-  }
-
-  // string osv = 11;
-  if (this->osv().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->osv());
-  }
-
-  // string brand = 12;
-  if (this->brand().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->brand());
-  }
-
-  // string model = 13;
-  if (this->model().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->model());
-  }
-
-  // string sdk_ver = 16;
-  if (this->sdk_ver().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->sdk_ver());
-  }
-
-  // string operator = 24;
-  if (this->operator_().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->operator_());
-  }
-
-  // string ip = 26;
-  if (this->ip().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->ip());
-  }
-
-  // string province = 27;
-  if (this->province().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->province());
-  }
-
-  // string city = 28;
-  if (this->city().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->city());
-  }
-
-  // string carrier = 29;
-  if (this->carrier().size() > 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->carrier());
-  }
-
-  // int32 pub_id = 1;
-  if (this->pub_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->pub_id());
-  }
-
-  // int32 app_id = 2;
-  if (this->app_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->app_id());
-  }
-
-  // int32 placement_id = 3;
-  if (this->placement_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->placement_id());
-  }
-
-  // int32 imp_type = 4;
-  if (this->imp_type() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->imp_type());
-  }
-
-  // int32 w = 7;
-  if (this->w() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->w());
-  }
-
-  // int32 h = 8;
-  if (this->h() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->h());
-  }
-
-  // int32 os = 10;
-  if (this->os() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->os());
-  }
-
-  // int32 devtype = 14;
-  if (this->devtype() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->devtype());
-  }
-
-  // int32 ppi = 15;
-  if (this->ppi() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->ppi());
-  }
-
-  // int32 orientation = 21;
-  if (this->orientation() != 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->orientation());
-  }
-
-  // int32 conn = 25;
-  if (this->conn() != 0) {
-    total_size += 2 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->conn());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *bidreq_);
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -2088,120 +955,42 @@ size_t PredictRequest::ByteSizeLong() const {
 }
 
 void PredictRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xnad.ml.PredictRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.PredictRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictRequest* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PredictRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.PredictRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xnad.ml.PredictRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.PredictRequest)
     MergeFrom(*source);
   }
 }
 
 void PredictRequest::MergeFrom(const PredictRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xnad.ml.PredictRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.PredictRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   ads_.MergeFrom(from.ads_);
-  if (from.app_pkg().size() > 0) {
-
-    app_pkg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_pkg_);
-  }
-  if (from.app_name().size() > 0) {
-
-    app_name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_name_);
-  }
-  if (from.app_ver().size() > 0) {
-
-    app_ver_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.app_ver_);
-  }
-  if (from.osv().size() > 0) {
-
-    osv_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.osv_);
-  }
-  if (from.brand().size() > 0) {
-
-    brand_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.brand_);
-  }
-  if (from.model().size() > 0) {
-
-    model_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.model_);
-  }
-  if (from.sdk_ver().size() > 0) {
-
-    sdk_ver_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.sdk_ver_);
-  }
-  if (from.operator_().size() > 0) {
-
-    operator__.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.operator__);
-  }
-  if (from.ip().size() > 0) {
-
-    ip_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.ip_);
-  }
-  if (from.province().size() > 0) {
-
-    province_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.province_);
-  }
-  if (from.city().size() > 0) {
-
-    city_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.city_);
-  }
-  if (from.carrier().size() > 0) {
-
-    carrier_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.carrier_);
-  }
-  if (from.pub_id() != 0) {
-    set_pub_id(from.pub_id());
-  }
-  if (from.app_id() != 0) {
-    set_app_id(from.app_id());
-  }
-  if (from.placement_id() != 0) {
-    set_placement_id(from.placement_id());
-  }
-  if (from.imp_type() != 0) {
-    set_imp_type(from.imp_type());
-  }
-  if (from.w() != 0) {
-    set_w(from.w());
-  }
-  if (from.h() != 0) {
-    set_h(from.h());
-  }
-  if (from.os() != 0) {
-    set_os(from.os());
-  }
-  if (from.devtype() != 0) {
-    set_devtype(from.devtype());
-  }
-  if (from.ppi() != 0) {
-    set_ppi(from.ppi());
-  }
-  if (from.orientation() != 0) {
-    set_orientation(from.orientation());
-  }
-  if (from.conn() != 0) {
-    set_conn(from.conn());
+  if (from.has_bidreq()) {
+    mutable_bidreq()->::xn_adp::BidRequest::MergeFrom(from.bidreq());
   }
 }
 
 void PredictRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xnad.ml.PredictRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.PredictRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void PredictRequest::CopyFrom(const PredictRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xnad.ml.PredictRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.PredictRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2219,41 +1008,7 @@ void PredictRequest::InternalSwap(PredictRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   CastToBase(&ads_)->InternalSwap(CastToBase(&other->ads_));
-  app_pkg_.Swap(&other->app_pkg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  app_name_.Swap(&other->app_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  app_ver_.Swap(&other->app_ver_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  osv_.Swap(&other->osv_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  brand_.Swap(&other->brand_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  model_.Swap(&other->model_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  sdk_ver_.Swap(&other->sdk_ver_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  operator__.Swap(&other->operator__, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  ip_.Swap(&other->ip_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  province_.Swap(&other->province_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  city_.Swap(&other->city_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  carrier_.Swap(&other->carrier_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(pub_id_, other->pub_id_);
-  swap(app_id_, other->app_id_);
-  swap(placement_id_, other->placement_id_);
-  swap(imp_type_, other->imp_type_);
-  swap(w_, other->w_);
-  swap(h_, other->h_);
-  swap(os_, other->os_);
-  swap(devtype_, other->devtype_);
-  swap(ppi_, other->ppi_);
-  swap(orientation_, other->orientation_);
-  swap(conn_, other->conn_);
+  swap(bidreq_, other->bidreq_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PredictRequest::GetMetadata() const {
@@ -2278,7 +1033,7 @@ const int PredictResult::kPcvrFieldNumber;
 PredictResult::PredictResult()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(constructor:xn_adp.PredictResult)
 }
 PredictResult::PredictResult(const PredictResult& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -2287,7 +1042,7 @@ PredictResult::PredictResult(const PredictResult& from)
   ::memcpy(&planid_, &from.planid_,
     static_cast<size_t>(reinterpret_cast<char*>(&pcvr_) -
     reinterpret_cast<char*>(&planid_)) + sizeof(pcvr_));
-  // @@protoc_insertion_point(copy_constructor:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.PredictResult)
 }
 
 void PredictResult::SharedCtor() {
@@ -2297,7 +1052,7 @@ void PredictResult::SharedCtor() {
 }
 
 PredictResult::~PredictResult() {
-  // @@protoc_insertion_point(destructor:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(destructor:xn_adp.PredictResult)
   SharedDtor();
 }
 
@@ -2314,7 +1069,7 @@ const PredictResult& PredictResult::default_instance() {
 
 
 void PredictResult::Clear() {
-// @@protoc_insertion_point(message_clear_start:xnad.ml.PredictResult)
+// @@protoc_insertion_point(message_clear_start:xn_adp.PredictResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2378,7 +1133,7 @@ bool PredictResult::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(parse_start:xn_adp.PredictResult)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -2435,10 +1190,10 @@ bool PredictResult::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(parse_success:xn_adp.PredictResult)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(parse_failure:xn_adp.PredictResult)
   return false;
 #undef DO_
 }
@@ -2446,7 +1201,7 @@ failure:
 
 void PredictResult::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(serialize_start:xn_adp.PredictResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2469,12 +1224,12 @@ void PredictResult::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(serialize_end:xn_adp.PredictResult)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* PredictResult::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.PredictResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2497,12 +1252,12 @@ void PredictResult::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.PredictResult)
   return target;
 }
 
 size_t PredictResult::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xnad.ml.PredictResult)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.PredictResult)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2541,22 +1296,22 @@ size_t PredictResult::ByteSizeLong() const {
 }
 
 void PredictResult::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xnad.ml.PredictResult)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.PredictResult)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictResult* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PredictResult>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.PredictResult)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xnad.ml.PredictResult)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.PredictResult)
     MergeFrom(*source);
   }
 }
 
 void PredictResult::MergeFrom(const PredictResult& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xnad.ml.PredictResult)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.PredictResult)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2574,14 +1329,14 @@ void PredictResult::MergeFrom(const PredictResult& from) {
 }
 
 void PredictResult::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xnad.ml.PredictResult)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.PredictResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void PredictResult::CopyFrom(const PredictResult& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xnad.ml.PredictResult)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.PredictResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2625,7 +1380,7 @@ const int PredictResponse::kDataFieldNumber;
 PredictResponse::PredictResponse()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(constructor:xn_adp.PredictResponse)
 }
 PredictResponse::PredictResponse(const PredictResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -2637,7 +1392,7 @@ PredictResponse::PredictResponse(const PredictResponse& from)
     msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
   }
   code_ = from.code_;
-  // @@protoc_insertion_point(copy_constructor:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.PredictResponse)
 }
 
 void PredictResponse::SharedCtor() {
@@ -2647,7 +1402,7 @@ void PredictResponse::SharedCtor() {
 }
 
 PredictResponse::~PredictResponse() {
-  // @@protoc_insertion_point(destructor:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(destructor:xn_adp.PredictResponse)
   SharedDtor();
 }
 
@@ -2665,7 +1420,7 @@ const PredictResponse& PredictResponse::default_instance() {
 
 
 void PredictResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:xnad.ml.PredictResponse)
+// @@protoc_insertion_point(message_clear_start:xn_adp.PredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2694,11 +1449,11 @@ const char* PredictResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       // string msg = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_msg(), ptr, ctx, "xnad.ml.PredictResponse.msg");
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_msg(), ptr, ctx, "xn_adp.PredictResponse.msg");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .xnad.ml.PredictResult data = 3;
+      // repeated .xn_adp.PredictResult data = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
@@ -2734,7 +1489,7 @@ bool PredictResponse::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(parse_start:xn_adp.PredictResponse)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -2761,14 +1516,14 @@ bool PredictResponse::MergePartialFromCodedStream(
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             this->msg().data(), static_cast<int>(this->msg().length()),
             ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xnad.ml.PredictResponse.msg"));
+            "xn_adp.PredictResponse.msg"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // repeated .xnad.ml.PredictResult data = 3;
+      // repeated .xn_adp.PredictResult data = 3;
       case 3: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
@@ -2791,10 +1546,10 @@ bool PredictResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(parse_success:xn_adp.PredictResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(parse_failure:xn_adp.PredictResponse)
   return false;
 #undef DO_
 }
@@ -2802,7 +1557,7 @@ failure:
 
 void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(serialize_start:xn_adp.PredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2816,12 +1571,12 @@ void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->msg().data(), static_cast<int>(this->msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictResponse.msg");
+      "xn_adp.PredictResponse.msg");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->msg(), output);
   }
 
-  // repeated .xnad.ml.PredictResult data = 3;
+  // repeated .xn_adp.PredictResult data = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->data_size()); i < n; i++) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -2834,12 +1589,12 @@ void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(serialize_end:xn_adp.PredictResponse)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* PredictResponse::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.PredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2853,13 +1608,13 @@ void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->msg().data(), static_cast<int>(this->msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xnad.ml.PredictResponse.msg");
+      "xn_adp.PredictResponse.msg");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
         2, this->msg(), target);
   }
 
-  // repeated .xnad.ml.PredictResult data = 3;
+  // repeated .xn_adp.PredictResult data = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->data_size()); i < n; i++) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -2871,12 +1626,12 @@ void PredictResponse::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.PredictResponse)
   return target;
 }
 
 size_t PredictResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xnad.ml.PredictResponse)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.PredictResponse)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -2888,7 +1643,7 @@ size_t PredictResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .xnad.ml.PredictResult data = 3;
+  // repeated .xn_adp.PredictResult data = 3;
   {
     unsigned int count = static_cast<unsigned int>(this->data_size());
     total_size += 1UL * count;
@@ -2919,22 +1674,22 @@ size_t PredictResponse::ByteSizeLong() const {
 }
 
 void PredictResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xnad.ml.PredictResponse)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.PredictResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictResponse* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PredictResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.PredictResponse)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xnad.ml.PredictResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.PredictResponse)
     MergeFrom(*source);
   }
 }
 
 void PredictResponse::MergeFrom(const PredictResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xnad.ml.PredictResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.PredictResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2951,14 +1706,14 @@ void PredictResponse::MergeFrom(const PredictResponse& from) {
 }
 
 void PredictResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xnad.ml.PredictResponse)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.PredictResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void PredictResponse::CopyFrom(const PredictResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xnad.ml.PredictResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.PredictResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2987,20 +1742,19 @@ void PredictResponse::InternalSwap(PredictResponse* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace ml
-}  // namespace xnad
+}  // namespace xn_adp
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::xnad::ml::CandidateAd* Arena::CreateMaybeMessage< ::xnad::ml::CandidateAd >(Arena* arena) {
-  return Arena::CreateInternal< ::xnad::ml::CandidateAd >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::CandidateAd* Arena::CreateMaybeMessage< ::xn_adp::CandidateAd >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::CandidateAd >(arena);
 }
-template<> PROTOBUF_NOINLINE ::xnad::ml::PredictRequest* Arena::CreateMaybeMessage< ::xnad::ml::PredictRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::xnad::ml::PredictRequest >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::PredictRequest* Arena::CreateMaybeMessage< ::xn_adp::PredictRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::PredictRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::xnad::ml::PredictResult* Arena::CreateMaybeMessage< ::xnad::ml::PredictResult >(Arena* arena) {
-  return Arena::CreateInternal< ::xnad::ml::PredictResult >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::PredictResult* Arena::CreateMaybeMessage< ::xn_adp::PredictResult >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::PredictResult >(arena);
 }
-template<> PROTOBUF_NOINLINE ::xnad::ml::PredictResponse* Arena::CreateMaybeMessage< ::xnad::ml::PredictResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::xnad::ml::PredictResponse >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::PredictResponse* Arena::CreateMaybeMessage< ::xn_adp::PredictResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::PredictResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
