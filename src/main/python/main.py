@@ -34,7 +34,7 @@ client = ModelPredictService.Client(protocol)
 # Connect!
 transport.open()
 
-msg = client.predictPb("default", v)
+msg = client.predictPb("default3", v)
 #msg = client.predictList([{"Device_Os":"ios"},{"Device_Os":"ios"},{"Device_Os":"android","Slot_Width":"1"}])
 print(msg)
 resonse = PredictResponse()

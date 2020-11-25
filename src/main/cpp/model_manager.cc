@@ -4,9 +4,12 @@ unordered_map<string,shared_ptr<PredictModel>> ModelManager::models;
 
 void ModelManager::init(){
     string model_name("default");
-    string feature_path("data/default/features.json");
-    string model_path("data/default/frozen_model.pb");
+    string feature_path("data/model/default/features.json");
+    string model_path("data/model/default/frozen_model.pb");
     update_model(model_name,feature_path,model_path);
+
+    string model_name2("default2");
+    update_model(model_name2,feature_path,model_path);
 }
 
 void ModelManager::update_model(string &model_key, string &feature_path,string &model_path){
