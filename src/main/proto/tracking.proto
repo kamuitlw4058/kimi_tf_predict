@@ -1,17 +1,16 @@
 syntax="proto3";
 
-package xnad;
-option java_package = "com.xiaoniuhy.xnad.tracking";
+package xn_adp;
+option java_package = "com.xiaoniuhy.adp.pb.tracking";
+//option java_package = "com.xiaoniuhy.xnad.tracking";
 option java_multiple_files = true;
-option java_outer_classname = "AdProto";
-
+//option java_outer_classname = "AdProto";
 message XNBidInfo
 {
   // ad info
   int32 advid = 1;
   int32 campid = 2;
   int32 planid = 3;
-  
   int32 crtid = 4;
   // bid info
   int64 bidtime = 5;
@@ -28,7 +27,18 @@ message ThirdBidInfo
   string ad_id = 3;
   string crt_id = 4;
 }
-message BidInfo {
+message LocationInfo
+{
+  string province = 1;
+  string city = 2;
+  string district = 3;
+  string street = 4;
+  string street_number = 5;
+  string address = 6;
+  string poi_name = 7;
+};
+message BidRequest
+{
   // media info
   int64 req_id = 1;
   int64 req_time = 2;
@@ -36,31 +46,47 @@ message BidInfo {
   int32 app_id = 4;
   int32 placement_id = 5;
   int32 imp_type = 6;
-  // ad info
-  int32 dsp = 10;
-  int32 price = 11;
-  int32 action_type = 12;
-  string crt_size = 13;
-  string ad_pkg = 14;
-  XNBidInfo xn_bi = 15;
-  ThirdBidInfo third_bi = 16;
+  int32 w = 7;
+  int32 h = 8;
   // device info
-  string sdkv = 20;
-  int32 os = 21;
-  string osv = 22;
-  string brand = 23;
-  string model = 24;
-  int32 conn = 25;
-  int32 devtype = 26;
-  string operator = 27;
-  string imei = 28;
-  string oaid = 29;
-  string android_id = 30;
-  string idfa = 31;
-  string idfv = 32;
-  string ip = 33;
-  float lat = 34;
-  float lon = 35;
+  string sdkv = 10;
+  int32 os = 11;
+  string osv = 12;
+  string brand = 13;
+  string model = 14;
+  int32 conn = 15;
+  int32 devtype = 16;
+  string operator = 17;
+  string imei = 18;
+  string oaid = 19;
+  string android_id = 20;
+  string idfa = 21;
+  string idfv = 22;
+  string ip = 23;
+  float lat = 24;
+  float lon = 25;
+  int32 carrier = 26;   // 移动运营商
+  string app_ver = 27;  // 应用版本号
+  int32 orientation = 28; // 设备方向
+  int32 ppi = 29; // 屏幕PPI
+  LocationInfo location = 36;
+};
+message BidResponse
+{
+  // ad info
+  int32 dsp = 1;  // dsp平台ID
+  int32 price = 2;  // 展示价格ECPM，单位：分
+  int32 action_type = 3;  // 交互类型：打开页面 or 下载apk
+  string crt_size = 4;    // 创意尺寸：宽x高
+  string ad_pkg = 5;      // 填充广告包名（可选）
+  XNBidInfo xn_bi = 6;    // 小牛DSP内部字段
+  ThirdBidInfo third_bi = 7;  // 第三方DSP字段
+};
+message BidInfo {
+  BidRequest req = 1;
+  BidResponse resp = 2;
+  string result = 3;  // 处理结果（错误码）
+  int32 win_price = 4; // 成交价
 };
 
 message TrackingLog
@@ -72,4 +98,12 @@ message TrackingLog
   int64 client_event_time = 5; // 客户端事件时间
   int64 client_fill_time = 6;  // 客户端广告填充时间
   int32 conv_event_code = 7; // 广告主回传转化事件
+};
+
+message AdxBrokerLog {
+  BidRequest req = 1; // 媒体请求信息
+  BidResponse resp = 2; // DSP平台响应信息
+  string result = 3;  // 处理结果（ADX错误码）
+  int32 dsp = 4;      // DSP平台ID，填充时等于resp.dsp;
+  string dsp_nbr = 5; // DSP平台返回的错误码
 };
