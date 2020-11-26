@@ -54,17 +54,15 @@ void ModelPredictServiceHandler::convertPb(PredictRequest &request, vector<map<s
         row_dict["Geo_Street"] = street;
         row_dict["Geo_PoiName"] = poi_name;
 
-        row_dict["Geo_Street"] = street;
-        row_dict["Geo_PoiName"] = poi_name;
+        row_dict["Media_Domain"] = app_id;
+        row_dict["Slot_ImpType"] = imp_type;
 
         //ads info
         CandidateAd ad = request.ads(i);
         auto actiontype = std::to_string(ad.actiontype());
-        auto imptype = std::to_string(ad.imptype());
         auto landingtype = std::to_string(ad.landingtype());
         auto category = ad.category();
 
-        row_dict["Slot_ImpType"] = imptype;
         row_dict["Slot_ActionType"] = actiontype;
         row_dict["Slot_LandingType"] = landingtype;
         row_dict["Slot_Category"] = category;
