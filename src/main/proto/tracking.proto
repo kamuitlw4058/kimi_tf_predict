@@ -1,6 +1,6 @@
 syntax="proto3";
 
-package xn_adp;
+package xn_adp.tracking;
 option java_package = "com.xiaoniuhy.adp.pb.tracking";
 //option java_package = "com.xiaoniuhy.xnad.tracking";
 option java_multiple_files = true;

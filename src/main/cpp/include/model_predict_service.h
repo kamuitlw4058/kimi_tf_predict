@@ -4,10 +4,12 @@
 #include <feature_configure.h>
 #include <tf_model.h>
 #include <ml.pb.h>
+#include <tracking.pb.h>
 #include <memory.h>
 #include <model_manager.h>
 
-using namespace ::xnad::ml;
+using namespace ::xn_adp::ml;
+using namespace ::xn_adp::tracking;
 
 #ifndef MODEL_PREDICT_SERVICE
 #define MODEL_PREDICT_SERVICE

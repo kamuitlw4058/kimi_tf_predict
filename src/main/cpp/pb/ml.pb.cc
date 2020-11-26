@@ -15,10 +15,11 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_tracking_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BidRequest_tracking_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ml_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CandidateAd_ml_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_ml_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PredictResult_ml_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_tracking_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BidRequest_tracking_2eproto;
 namespace xn_adp {
+namespace ml {
 class CandidateAdDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CandidateAd> _instance;
@@ -35,16 +36,17 @@ class PredictResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PredictResponse> _instance;
 } _PredictResponse_default_instance_;
+}  // namespace ml
 }  // namespace xn_adp
 static void InitDefaultsscc_info_CandidateAd_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xn_adp::_CandidateAd_default_instance_;
-    new (ptr) ::xn_adp::CandidateAd();
+    void* ptr = &::xn_adp::ml::_CandidateAd_default_instance_;
+    new (ptr) ::xn_adp::ml::CandidateAd();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xn_adp::CandidateAd::InitAsDefaultInstance();
+  ::xn_adp::ml::CandidateAd::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CandidateAd_ml_2eproto =
@@ -54,11 +56,11 @@ static void InitDefaultsscc_info_PredictRequest_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xn_adp::_PredictRequest_default_instance_;
-    new (ptr) ::xn_adp::PredictRequest();
+    void* ptr = &::xn_adp::ml::_PredictRequest_default_instance_;
+    new (ptr) ::xn_adp::ml::PredictRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xn_adp::PredictRequest::InitAsDefaultInstance();
+  ::xn_adp::ml::PredictRequest::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PredictRequest_ml_2eproto =
@@ -70,11 +72,11 @@ static void InitDefaultsscc_info_PredictResponse_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xn_adp::_PredictResponse_default_instance_;
-    new (ptr) ::xn_adp::PredictResponse();
+    void* ptr = &::xn_adp::ml::_PredictResponse_default_instance_;
+    new (ptr) ::xn_adp::ml::PredictResponse();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xn_adp::PredictResponse::InitAsDefaultInstance();
+  ::xn_adp::ml::PredictResponse::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PredictResponse_ml_2eproto =
@@ -85,11 +87,11 @@ static void InitDefaultsscc_info_PredictResult_ml_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::xn_adp::_PredictResult_default_instance_;
-    new (ptr) ::xn_adp::PredictResult();
+    void* ptr = &::xn_adp::ml::_PredictResult_default_instance_;
+    new (ptr) ::xn_adp::ml::PredictResult();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::xn_adp::PredictResult::InitAsDefaultInstance();
+  ::xn_adp::ml::PredictResult::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PredictResult_ml_2eproto =
@@ -101,66 +103,67 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ml_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, planid_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, campid_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, advid_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, landingtype_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, actiontype_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::CandidateAd, category_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, planid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, campid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, advid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, landingtype_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, actiontype_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::CandidateAd, category_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictRequest, bidreq_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictRequest, ads_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictRequest, bidreq_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictRequest, ads_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResult, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, planid_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, pctr_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResult, pcvr_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResult, planid_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResult, pctr_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResult, pcvr_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, code_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, msg_),
-  PROTOBUF_FIELD_OFFSET(::xn_adp::PredictResponse, data_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResponse, code_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResponse, msg_),
+  PROTOBUF_FIELD_OFFSET(::xn_adp::ml::PredictResponse, data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::xn_adp::CandidateAd)},
-  { 11, -1, sizeof(::xn_adp::PredictRequest)},
-  { 18, -1, sizeof(::xn_adp::PredictResult)},
-  { 26, -1, sizeof(::xn_adp::PredictResponse)},
+  { 0, -1, sizeof(::xn_adp::ml::CandidateAd)},
+  { 11, -1, sizeof(::xn_adp::ml::PredictRequest)},
+  { 18, -1, sizeof(::xn_adp::ml::PredictResult)},
+  { 26, -1, sizeof(::xn_adp::ml::PredictResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_CandidateAd_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_PredictRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_PredictResult_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::_PredictResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::ml::_CandidateAd_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::ml::_PredictRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::ml::_PredictResult_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::xn_adp::ml::_PredictResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_ml_2eproto[] =
-  "\n\010ml.proto\022\006xn_adp\032\016tracking.proto\"w\n\013Ca"
-  "ndidateAd\022\016\n\006planid\030\001 \001(\005\022\016\n\006campid\030\002 \001("
-  "\005\022\r\n\005advid\030\003 \001(\005\022\023\n\013landingtype\030\004 \001(\005\022\022\n"
-  "\nactiontype\030\006 \001(\005\022\020\n\010category\030\007 \001(\t\"V\n\016P"
-  "redictRequest\022\"\n\006bidreq\030\001 \001(\0132\022.xn_adp.B"
-  "idRequest\022 \n\003ads\030\002 \003(\0132\023.xn_adp.Candidat"
-  "eAd\";\n\rPredictResult\022\016\n\006planid\030\001 \001(\005\022\014\n\004"
-  "pctr\030\002 \001(\005\022\014\n\004pcvr\030\003 \001(\005\"Q\n\017PredictRespo"
-  "nse\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030\002 \001(\t\022#\n\004data\030\003"
-  " \003(\0132\025.xn_adp.PredictResultB\033\n\027com.xiaon"
-  "iuhy.adp.pb.mlP\001b\006proto3"
+  "\n\010ml.proto\022\txn_adp.ml\032\016tracking.proto\"w\n"
+  "\013CandidateAd\022\016\n\006planid\030\001 \001(\005\022\016\n\006campid\030\002"
+  " \001(\005\022\r\n\005advid\030\003 \001(\005\022\023\n\013landingtype\030\004 \001(\005"
+  "\022\022\n\nactiontype\030\006 \001(\005\022\020\n\010category\030\007 \001(\t\"b"
+  "\n\016PredictRequest\022+\n\006bidreq\030\001 \001(\0132\033.xn_ad"
+  "p.tracking.BidRequest\022#\n\003ads\030\002 \003(\0132\026.xn_"
+  "adp.ml.CandidateAd\";\n\rPredictResult\022\016\n\006p"
+  "lanid\030\001 \001(\005\022\014\n\004pctr\030\002 \001(\005\022\014\n\004pcvr\030\003 \001(\005\""
+  "T\n\017PredictResponse\022\014\n\004code\030\001 \001(\005\022\013\n\003msg\030"
+  "\002 \001(\t\022&\n\004data\030\003 \003(\0132\030.xn_adp.ml.PredictR"
+  "esultB\033\n\027com.xiaoniuhy.adp.pb.mlP\001b\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ml_2eproto_deps[1] = {
   &::descriptor_table_tracking_2eproto,
@@ -174,7 +177,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ml_
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ml_2eproto_once;
 static bool descriptor_table_ml_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ml_2eproto = {
-  &descriptor_table_ml_2eproto_initialized, descriptor_table_protodef_ml_2eproto, "ml.proto", 424,
+  &descriptor_table_ml_2eproto_initialized, descriptor_table_protodef_ml_2eproto, "ml.proto", 442,
   &descriptor_table_ml_2eproto_once, descriptor_table_ml_2eproto_sccs, descriptor_table_ml_2eproto_deps, 4, 1,
   schemas, file_default_instances, TableStruct_ml_2eproto::offsets,
   file_level_metadata_ml_2eproto, 4, file_level_enum_descriptors_ml_2eproto, file_level_service_descriptors_ml_2eproto,
@@ -183,6 +186,7 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ml_2ep
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_ml_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ml_2eproto), true);
 namespace xn_adp {
+namespace ml {
 
 // ===================================================================
 
@@ -204,7 +208,7 @@ const int CandidateAd::kCategoryFieldNumber;
 CandidateAd::CandidateAd()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(constructor:xn_adp.ml.CandidateAd)
 }
 CandidateAd::CandidateAd(const CandidateAd& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -217,7 +221,7 @@ CandidateAd::CandidateAd(const CandidateAd& from)
   ::memcpy(&planid_, &from.planid_,
     static_cast<size_t>(reinterpret_cast<char*>(&actiontype_) -
     reinterpret_cast<char*>(&planid_)) + sizeof(actiontype_));
-  // @@protoc_insertion_point(copy_constructor:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.ml.CandidateAd)
 }
 
 void CandidateAd::SharedCtor() {
@@ -229,7 +233,7 @@ void CandidateAd::SharedCtor() {
 }
 
 CandidateAd::~CandidateAd() {
-  // @@protoc_insertion_point(destructor:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(destructor:xn_adp.ml.CandidateAd)
   SharedDtor();
 }
 
@@ -247,7 +251,7 @@ const CandidateAd& CandidateAd::default_instance() {
 
 
 void CandidateAd::Clear() {
-// @@protoc_insertion_point(message_clear_start:xn_adp.CandidateAd)
+// @@protoc_insertion_point(message_clear_start:xn_adp.ml.CandidateAd)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -305,7 +309,7 @@ const char* CandidateAd::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       // string category = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_category(), ptr, ctx, "xn_adp.CandidateAd.category");
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_category(), ptr, ctx, "xn_adp.ml.CandidateAd.category");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -333,7 +337,7 @@ bool CandidateAd::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(parse_start:xn_adp.ml.CandidateAd)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -412,7 +416,7 @@ bool CandidateAd::MergePartialFromCodedStream(
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             this->category().data(), static_cast<int>(this->category().length()),
             ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xn_adp.CandidateAd.category"));
+            "xn_adp.ml.CandidateAd.category"));
         } else {
           goto handle_unusual;
         }
@@ -431,10 +435,10 @@ bool CandidateAd::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(parse_success:xn_adp.ml.CandidateAd)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(parse_failure:xn_adp.ml.CandidateAd)
   return false;
 #undef DO_
 }
@@ -442,7 +446,7 @@ failure:
 
 void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(serialize_start:xn_adp.ml.CandidateAd)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -476,7 +480,7 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->category().data(), static_cast<int>(this->category().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xn_adp.CandidateAd.category");
+      "xn_adp.ml.CandidateAd.category");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
       7, this->category(), output);
   }
@@ -485,12 +489,12 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(serialize_end:xn_adp.ml.CandidateAd)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* CandidateAd::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.ml.CandidateAd)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -524,7 +528,7 @@ void CandidateAd::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->category().data(), static_cast<int>(this->category().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xn_adp.CandidateAd.category");
+      "xn_adp.ml.CandidateAd.category");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
         7, this->category(), target);
@@ -534,12 +538,12 @@ void CandidateAd::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.ml.CandidateAd)
   return target;
 }
 
 size_t CandidateAd::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xn_adp.CandidateAd)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.ml.CandidateAd)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -599,22 +603,22 @@ size_t CandidateAd::ByteSizeLong() const {
 }
 
 void CandidateAd::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.CandidateAd)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.ml.CandidateAd)
   GOOGLE_DCHECK_NE(&from, this);
   const CandidateAd* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CandidateAd>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.ml.CandidateAd)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.ml.CandidateAd)
     MergeFrom(*source);
   }
 }
 
 void CandidateAd::MergeFrom(const CandidateAd& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.CandidateAd)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.ml.CandidateAd)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -642,14 +646,14 @@ void CandidateAd::MergeFrom(const CandidateAd& from) {
 }
 
 void CandidateAd::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.CandidateAd)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.ml.CandidateAd)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void CandidateAd::CopyFrom(const CandidateAd& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.CandidateAd)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.ml.CandidateAd)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -683,15 +687,15 @@ void CandidateAd::InternalSwap(CandidateAd* other) {
 // ===================================================================
 
 void PredictRequest::InitAsDefaultInstance() {
-  ::xn_adp::_PredictRequest_default_instance_._instance.get_mutable()->bidreq_ = const_cast< ::xn_adp::BidRequest*>(
-      ::xn_adp::BidRequest::internal_default_instance());
+  ::xn_adp::ml::_PredictRequest_default_instance_._instance.get_mutable()->bidreq_ = const_cast< ::xn_adp::tracking::BidRequest*>(
+      ::xn_adp::tracking::BidRequest::internal_default_instance());
 }
 class PredictRequest::HasBitSetters {
  public:
-  static const ::xn_adp::BidRequest& bidreq(const PredictRequest* msg);
+  static const ::xn_adp::tracking::BidRequest& bidreq(const PredictRequest* msg);
 };
 
-const ::xn_adp::BidRequest&
+const ::xn_adp::tracking::BidRequest&
 PredictRequest::HasBitSetters::bidreq(const PredictRequest* msg) {
   return *msg->bidreq_;
 }
@@ -709,7 +713,7 @@ const int PredictRequest::kAdsFieldNumber;
 PredictRequest::PredictRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(constructor:xn_adp.ml.PredictRequest)
 }
 PredictRequest::PredictRequest(const PredictRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -717,11 +721,11 @@ PredictRequest::PredictRequest(const PredictRequest& from)
       ads_(from.ads_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_bidreq()) {
-    bidreq_ = new ::xn_adp::BidRequest(*from.bidreq_);
+    bidreq_ = new ::xn_adp::tracking::BidRequest(*from.bidreq_);
   } else {
     bidreq_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.ml.PredictRequest)
 }
 
 void PredictRequest::SharedCtor() {
@@ -730,7 +734,7 @@ void PredictRequest::SharedCtor() {
 }
 
 PredictRequest::~PredictRequest() {
-  // @@protoc_insertion_point(destructor:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(destructor:xn_adp.ml.PredictRequest)
   SharedDtor();
 }
 
@@ -748,7 +752,7 @@ const PredictRequest& PredictRequest::default_instance() {
 
 
 void PredictRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:xn_adp.PredictRequest)
+// @@protoc_insertion_point(message_clear_start:xn_adp.ml.PredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -769,14 +773,14 @@ const char* PredictRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .xn_adp.BidRequest bidreq = 1;
+      // .xn_adp.tracking.BidRequest bidreq = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(mutable_bidreq(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .xn_adp.CandidateAd ads = 2;
+      // repeated .xn_adp.ml.CandidateAd ads = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr -= 1;
@@ -812,13 +816,13 @@ bool PredictRequest::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(parse_start:xn_adp.ml.PredictRequest)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .xn_adp.BidRequest bidreq = 1;
+      // .xn_adp.tracking.BidRequest bidreq = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
@@ -829,7 +833,7 @@ bool PredictRequest::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .xn_adp.CandidateAd ads = 2;
+      // repeated .xn_adp.ml.CandidateAd ads = 2;
       case 2: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
@@ -852,10 +856,10 @@ bool PredictRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(parse_success:xn_adp.ml.PredictRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(parse_failure:xn_adp.ml.PredictRequest)
   return false;
 #undef DO_
 }
@@ -863,17 +867,17 @@ failure:
 
 void PredictRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(serialize_start:xn_adp.ml.PredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .xn_adp.BidRequest bidreq = 1;
+  // .xn_adp.tracking.BidRequest bidreq = 1;
   if (this->has_bidreq()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::bidreq(this), output);
   }
 
-  // repeated .xn_adp.CandidateAd ads = 2;
+  // repeated .xn_adp.ml.CandidateAd ads = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->ads_size()); i < n; i++) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -886,23 +890,23 @@ void PredictRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(serialize_end:xn_adp.ml.PredictRequest)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* PredictRequest::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.ml.PredictRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .xn_adp.BidRequest bidreq = 1;
+  // .xn_adp.tracking.BidRequest bidreq = 1;
   if (this->has_bidreq()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::bidreq(this), target);
   }
 
-  // repeated .xn_adp.CandidateAd ads = 2;
+  // repeated .xn_adp.ml.CandidateAd ads = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->ads_size()); i < n; i++) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -914,12 +918,12 @@ void PredictRequest::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.ml.PredictRequest)
   return target;
 }
 
 size_t PredictRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xn_adp.PredictRequest)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.ml.PredictRequest)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -931,7 +935,7 @@ size_t PredictRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .xn_adp.CandidateAd ads = 2;
+  // repeated .xn_adp.ml.CandidateAd ads = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->ads_size());
     total_size += 1UL * count;
@@ -942,7 +946,7 @@ size_t PredictRequest::ByteSizeLong() const {
     }
   }
 
-  // .xn_adp.BidRequest bidreq = 1;
+  // .xn_adp.tracking.BidRequest bidreq = 1;
   if (this->has_bidreq()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -955,22 +959,22 @@ size_t PredictRequest::ByteSizeLong() const {
 }
 
 void PredictRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.PredictRequest)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.ml.PredictRequest)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictRequest* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PredictRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.ml.PredictRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.ml.PredictRequest)
     MergeFrom(*source);
   }
 }
 
 void PredictRequest::MergeFrom(const PredictRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.PredictRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.ml.PredictRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -978,19 +982,19 @@ void PredictRequest::MergeFrom(const PredictRequest& from) {
 
   ads_.MergeFrom(from.ads_);
   if (from.has_bidreq()) {
-    mutable_bidreq()->::xn_adp::BidRequest::MergeFrom(from.bidreq());
+    mutable_bidreq()->::xn_adp::tracking::BidRequest::MergeFrom(from.bidreq());
   }
 }
 
 void PredictRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.PredictRequest)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.ml.PredictRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void PredictRequest::CopyFrom(const PredictRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.PredictRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.ml.PredictRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1033,7 +1037,7 @@ const int PredictResult::kPcvrFieldNumber;
 PredictResult::PredictResult()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xn_adp.PredictResult)
+  // @@protoc_insertion_point(constructor:xn_adp.ml.PredictResult)
 }
 PredictResult::PredictResult(const PredictResult& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -1042,7 +1046,7 @@ PredictResult::PredictResult(const PredictResult& from)
   ::memcpy(&planid_, &from.planid_,
     static_cast<size_t>(reinterpret_cast<char*>(&pcvr_) -
     reinterpret_cast<char*>(&planid_)) + sizeof(pcvr_));
-  // @@protoc_insertion_point(copy_constructor:xn_adp.PredictResult)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.ml.PredictResult)
 }
 
 void PredictResult::SharedCtor() {
@@ -1052,7 +1056,7 @@ void PredictResult::SharedCtor() {
 }
 
 PredictResult::~PredictResult() {
-  // @@protoc_insertion_point(destructor:xn_adp.PredictResult)
+  // @@protoc_insertion_point(destructor:xn_adp.ml.PredictResult)
   SharedDtor();
 }
 
@@ -1069,7 +1073,7 @@ const PredictResult& PredictResult::default_instance() {
 
 
 void PredictResult::Clear() {
-// @@protoc_insertion_point(message_clear_start:xn_adp.PredictResult)
+// @@protoc_insertion_point(message_clear_start:xn_adp.ml.PredictResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1133,7 +1137,7 @@ bool PredictResult::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xn_adp.PredictResult)
+  // @@protoc_insertion_point(parse_start:xn_adp.ml.PredictResult)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -1190,10 +1194,10 @@ bool PredictResult::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xn_adp.PredictResult)
+  // @@protoc_insertion_point(parse_success:xn_adp.ml.PredictResult)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xn_adp.PredictResult)
+  // @@protoc_insertion_point(parse_failure:xn_adp.ml.PredictResult)
   return false;
 #undef DO_
 }
@@ -1201,7 +1205,7 @@ failure:
 
 void PredictResult::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xn_adp.PredictResult)
+  // @@protoc_insertion_point(serialize_start:xn_adp.ml.PredictResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1224,12 +1228,12 @@ void PredictResult::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xn_adp.PredictResult)
+  // @@protoc_insertion_point(serialize_end:xn_adp.ml.PredictResult)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* PredictResult::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.PredictResult)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.ml.PredictResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1252,12 +1256,12 @@ void PredictResult::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.PredictResult)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.ml.PredictResult)
   return target;
 }
 
 size_t PredictResult::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xn_adp.PredictResult)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.ml.PredictResult)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1296,22 +1300,22 @@ size_t PredictResult::ByteSizeLong() const {
 }
 
 void PredictResult::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.PredictResult)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.ml.PredictResult)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictResult* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PredictResult>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.PredictResult)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.ml.PredictResult)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.PredictResult)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.ml.PredictResult)
     MergeFrom(*source);
   }
 }
 
 void PredictResult::MergeFrom(const PredictResult& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.PredictResult)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.ml.PredictResult)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1329,14 +1333,14 @@ void PredictResult::MergeFrom(const PredictResult& from) {
 }
 
 void PredictResult::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.PredictResult)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.ml.PredictResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void PredictResult::CopyFrom(const PredictResult& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.PredictResult)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.ml.PredictResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1380,7 +1384,7 @@ const int PredictResponse::kDataFieldNumber;
 PredictResponse::PredictResponse()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(constructor:xn_adp.ml.PredictResponse)
 }
 PredictResponse::PredictResponse(const PredictResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -1392,7 +1396,7 @@ PredictResponse::PredictResponse(const PredictResponse& from)
     msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
   }
   code_ = from.code_;
-  // @@protoc_insertion_point(copy_constructor:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(copy_constructor:xn_adp.ml.PredictResponse)
 }
 
 void PredictResponse::SharedCtor() {
@@ -1402,7 +1406,7 @@ void PredictResponse::SharedCtor() {
 }
 
 PredictResponse::~PredictResponse() {
-  // @@protoc_insertion_point(destructor:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(destructor:xn_adp.ml.PredictResponse)
   SharedDtor();
 }
 
@@ -1420,7 +1424,7 @@ const PredictResponse& PredictResponse::default_instance() {
 
 
 void PredictResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:xn_adp.PredictResponse)
+// @@protoc_insertion_point(message_clear_start:xn_adp.ml.PredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1449,11 +1453,11 @@ const char* PredictResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       // string msg = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_msg(), ptr, ctx, "xn_adp.PredictResponse.msg");
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_msg(), ptr, ctx, "xn_adp.ml.PredictResponse.msg");
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .xn_adp.PredictResult data = 3;
+      // repeated .xn_adp.ml.PredictResult data = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
@@ -1489,7 +1493,7 @@ bool PredictResponse::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(parse_start:xn_adp.ml.PredictResponse)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -1516,14 +1520,14 @@ bool PredictResponse::MergePartialFromCodedStream(
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             this->msg().data(), static_cast<int>(this->msg().length()),
             ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
-            "xn_adp.PredictResponse.msg"));
+            "xn_adp.ml.PredictResponse.msg"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // repeated .xn_adp.PredictResult data = 3;
+      // repeated .xn_adp.ml.PredictResult data = 3;
       case 3: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
@@ -1546,10 +1550,10 @@ bool PredictResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(parse_success:xn_adp.ml.PredictResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(parse_failure:xn_adp.ml.PredictResponse)
   return false;
 #undef DO_
 }
@@ -1557,7 +1561,7 @@ failure:
 
 void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(serialize_start:xn_adp.ml.PredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1571,12 +1575,12 @@ void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->msg().data(), static_cast<int>(this->msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xn_adp.PredictResponse.msg");
+      "xn_adp.ml.PredictResponse.msg");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->msg(), output);
   }
 
-  // repeated .xn_adp.PredictResult data = 3;
+  // repeated .xn_adp.ml.PredictResult data = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->data_size()); i < n; i++) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -1589,12 +1593,12 @@ void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(serialize_end:xn_adp.ml.PredictResponse)
 }
 
 ::PROTOBUF_NAMESPACE_ID::uint8* PredictResponse::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:xn_adp.ml.PredictResponse)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1608,13 +1612,13 @@ void PredictResponse::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->msg().data(), static_cast<int>(this->msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "xn_adp.PredictResponse.msg");
+      "xn_adp.ml.PredictResponse.msg");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
         2, this->msg(), target);
   }
 
-  // repeated .xn_adp.PredictResult data = 3;
+  // repeated .xn_adp.ml.PredictResult data = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->data_size()); i < n; i++) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1626,12 +1630,12 @@ void PredictResponse::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:xn_adp.ml.PredictResponse)
   return target;
 }
 
 size_t PredictResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:xn_adp.PredictResponse)
+// @@protoc_insertion_point(message_byte_size_start:xn_adp.ml.PredictResponse)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1643,7 +1647,7 @@ size_t PredictResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .xn_adp.PredictResult data = 3;
+  // repeated .xn_adp.ml.PredictResult data = 3;
   {
     unsigned int count = static_cast<unsigned int>(this->data_size());
     total_size += 1UL * count;
@@ -1674,22 +1678,22 @@ size_t PredictResponse::ByteSizeLong() const {
 }
 
 void PredictResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.PredictResponse)
+// @@protoc_insertion_point(generalized_merge_from_start:xn_adp.ml.PredictResponse)
   GOOGLE_DCHECK_NE(&from, this);
   const PredictResponse* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PredictResponse>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:xn_adp.ml.PredictResponse)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:xn_adp.ml.PredictResponse)
     MergeFrom(*source);
   }
 }
 
 void PredictResponse::MergeFrom(const PredictResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.PredictResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:xn_adp.ml.PredictResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1706,14 +1710,14 @@ void PredictResponse::MergeFrom(const PredictResponse& from) {
 }
 
 void PredictResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.PredictResponse)
+// @@protoc_insertion_point(generalized_copy_from_start:xn_adp.ml.PredictResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void PredictResponse::CopyFrom(const PredictResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.PredictResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:xn_adp.ml.PredictResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1742,19 +1746,20 @@ void PredictResponse::InternalSwap(PredictResponse* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace ml
 }  // namespace xn_adp
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::xn_adp::CandidateAd* Arena::CreateMaybeMessage< ::xn_adp::CandidateAd >(Arena* arena) {
-  return Arena::CreateInternal< ::xn_adp::CandidateAd >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::ml::CandidateAd* Arena::CreateMaybeMessage< ::xn_adp::ml::CandidateAd >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::ml::CandidateAd >(arena);
 }
-template<> PROTOBUF_NOINLINE ::xn_adp::PredictRequest* Arena::CreateMaybeMessage< ::xn_adp::PredictRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::xn_adp::PredictRequest >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::ml::PredictRequest* Arena::CreateMaybeMessage< ::xn_adp::ml::PredictRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::ml::PredictRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::xn_adp::PredictResult* Arena::CreateMaybeMessage< ::xn_adp::PredictResult >(Arena* arena) {
-  return Arena::CreateInternal< ::xn_adp::PredictResult >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::ml::PredictResult* Arena::CreateMaybeMessage< ::xn_adp::ml::PredictResult >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::ml::PredictResult >(arena);
 }
-template<> PROTOBUF_NOINLINE ::xn_adp::PredictResponse* Arena::CreateMaybeMessage< ::xn_adp::PredictResponse >(Arena* arena) {
-  return Arena::CreateInternal< ::xn_adp::PredictResponse >(arena);
+template<> PROTOBUF_NOINLINE ::xn_adp::ml::PredictResponse* Arena::CreateMaybeMessage< ::xn_adp::ml::PredictResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::xn_adp::ml::PredictResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

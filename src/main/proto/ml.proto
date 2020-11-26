@@ -1,8 +1,7 @@
-
 syntax="proto3";
 import "tracking.proto";
 
-package xn_adp;
+package xn_adp.ml;
 option java_package = "com.xiaoniuhy.adp.pb.ml";
 option java_multiple_files = true;
 
@@ -17,7 +16,7 @@ message CandidateAd
 };
 message PredictRequest
 {
-    BidRequest bidreq = 1;
+    xn_adp.tracking.BidRequest bidreq = 1;
     repeated CandidateAd ads = 2;
 };
 

@@ -56,6 +56,7 @@ struct TableStruct_ml_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ml_2eproto;
 namespace xn_adp {
+namespace ml {
 class CandidateAd;
 class CandidateAdDefaultTypeInternal;
 extern CandidateAdDefaultTypeInternal _CandidateAd_default_instance_;
@@ -68,19 +69,21 @@ extern PredictResponseDefaultTypeInternal _PredictResponse_default_instance_;
 class PredictResult;
 class PredictResultDefaultTypeInternal;
 extern PredictResultDefaultTypeInternal _PredictResult_default_instance_;
+}  // namespace ml
 }  // namespace xn_adp
 PROTOBUF_NAMESPACE_OPEN
-template<> ::xn_adp::CandidateAd* Arena::CreateMaybeMessage<::xn_adp::CandidateAd>(Arena*);
-template<> ::xn_adp::PredictRequest* Arena::CreateMaybeMessage<::xn_adp::PredictRequest>(Arena*);
-template<> ::xn_adp::PredictResponse* Arena::CreateMaybeMessage<::xn_adp::PredictResponse>(Arena*);
-template<> ::xn_adp::PredictResult* Arena::CreateMaybeMessage<::xn_adp::PredictResult>(Arena*);
+template<> ::xn_adp::ml::CandidateAd* Arena::CreateMaybeMessage<::xn_adp::ml::CandidateAd>(Arena*);
+template<> ::xn_adp::ml::PredictRequest* Arena::CreateMaybeMessage<::xn_adp::ml::PredictRequest>(Arena*);
+template<> ::xn_adp::ml::PredictResponse* Arena::CreateMaybeMessage<::xn_adp::ml::PredictResponse>(Arena*);
+template<> ::xn_adp::ml::PredictResult* Arena::CreateMaybeMessage<::xn_adp::ml::PredictResult>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace xn_adp {
+namespace ml {
 
 // ===================================================================
 
 class CandidateAd :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.CandidateAd) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.ml.CandidateAd) */ {
  public:
   CandidateAd();
   virtual ~CandidateAd();
@@ -164,7 +167,7 @@ class CandidateAd :
   void InternalSwap(CandidateAd* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "xn_adp.CandidateAd";
+    return "xn_adp.ml.CandidateAd";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -230,7 +233,7 @@ class CandidateAd :
   ::PROTOBUF_NAMESPACE_ID::int32 actiontype() const;
   void set_actiontype(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // @@protoc_insertion_point(class_scope:xn_adp.CandidateAd)
+  // @@protoc_insertion_point(class_scope:xn_adp.ml.CandidateAd)
  private:
   class HasBitSetters;
 
@@ -247,7 +250,7 @@ class CandidateAd :
 // -------------------------------------------------------------------
 
 class PredictRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.PredictRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.ml.PredictRequest) */ {
  public:
   PredictRequest();
   virtual ~PredictRequest();
@@ -331,7 +334,7 @@ class PredictRequest :
   void InternalSwap(PredictRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "xn_adp.PredictRequest";
+    return "xn_adp.ml.PredictRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -355,41 +358,41 @@ class PredictRequest :
 
   // accessors -------------------------------------------------------
 
-  // repeated .xn_adp.CandidateAd ads = 2;
+  // repeated .xn_adp.ml.CandidateAd ads = 2;
   int ads_size() const;
   void clear_ads();
   static const int kAdsFieldNumber = 2;
-  ::xn_adp::CandidateAd* mutable_ads(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::CandidateAd >*
+  ::xn_adp::ml::CandidateAd* mutable_ads(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::CandidateAd >*
       mutable_ads();
-  const ::xn_adp::CandidateAd& ads(int index) const;
-  ::xn_adp::CandidateAd* add_ads();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::CandidateAd >&
+  const ::xn_adp::ml::CandidateAd& ads(int index) const;
+  ::xn_adp::ml::CandidateAd* add_ads();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::CandidateAd >&
       ads() const;
 
-  // .xn_adp.BidRequest bidreq = 1;
+  // .xn_adp.tracking.BidRequest bidreq = 1;
   bool has_bidreq() const;
   void clear_bidreq();
   static const int kBidreqFieldNumber = 1;
-  const ::xn_adp::BidRequest& bidreq() const;
-  ::xn_adp::BidRequest* release_bidreq();
-  ::xn_adp::BidRequest* mutable_bidreq();
-  void set_allocated_bidreq(::xn_adp::BidRequest* bidreq);
+  const ::xn_adp::tracking::BidRequest& bidreq() const;
+  ::xn_adp::tracking::BidRequest* release_bidreq();
+  ::xn_adp::tracking::BidRequest* mutable_bidreq();
+  void set_allocated_bidreq(::xn_adp::tracking::BidRequest* bidreq);
 
-  // @@protoc_insertion_point(class_scope:xn_adp.PredictRequest)
+  // @@protoc_insertion_point(class_scope:xn_adp.ml.PredictRequest)
  private:
   class HasBitSetters;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::CandidateAd > ads_;
-  ::xn_adp::BidRequest* bidreq_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::CandidateAd > ads_;
+  ::xn_adp::tracking::BidRequest* bidreq_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_ml_2eproto;
 };
 // -------------------------------------------------------------------
 
 class PredictResult :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.PredictResult) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.ml.PredictResult) */ {
  public:
   PredictResult();
   virtual ~PredictResult();
@@ -473,7 +476,7 @@ class PredictResult :
   void InternalSwap(PredictResult* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "xn_adp.PredictResult";
+    return "xn_adp.ml.PredictResult";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -515,7 +518,7 @@ class PredictResult :
   ::PROTOBUF_NAMESPACE_ID::int32 pcvr() const;
   void set_pcvr(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // @@protoc_insertion_point(class_scope:xn_adp.PredictResult)
+  // @@protoc_insertion_point(class_scope:xn_adp.ml.PredictResult)
  private:
   class HasBitSetters;
 
@@ -529,7 +532,7 @@ class PredictResult :
 // -------------------------------------------------------------------
 
 class PredictResponse :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.PredictResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:xn_adp.ml.PredictResponse) */ {
  public:
   PredictResponse();
   virtual ~PredictResponse();
@@ -613,7 +616,7 @@ class PredictResponse :
   void InternalSwap(PredictResponse* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "xn_adp.PredictResponse";
+    return "xn_adp.ml.PredictResponse";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -637,16 +640,16 @@ class PredictResponse :
 
   // accessors -------------------------------------------------------
 
-  // repeated .xn_adp.PredictResult data = 3;
+  // repeated .xn_adp.ml.PredictResult data = 3;
   int data_size() const;
   void clear_data();
   static const int kDataFieldNumber = 3;
-  ::xn_adp::PredictResult* mutable_data(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::PredictResult >*
+  ::xn_adp::ml::PredictResult* mutable_data(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::PredictResult >*
       mutable_data();
-  const ::xn_adp::PredictResult& data(int index) const;
-  ::xn_adp::PredictResult* add_data();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::PredictResult >&
+  const ::xn_adp::ml::PredictResult& data(int index) const;
+  ::xn_adp::ml::PredictResult* add_data();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::PredictResult >&
       data() const;
 
   // string msg = 2;
@@ -667,12 +670,12 @@ class PredictResponse :
   ::PROTOBUF_NAMESPACE_ID::int32 code() const;
   void set_code(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // @@protoc_insertion_point(class_scope:xn_adp.PredictResponse)
+  // @@protoc_insertion_point(class_scope:xn_adp.ml.PredictResponse)
  private:
   class HasBitSetters;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::PredictResult > data_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::PredictResult > data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
   ::PROTOBUF_NAMESPACE_ID::int32 code_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -694,13 +697,13 @@ inline void CandidateAd::clear_planid() {
   planid_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 CandidateAd::planid() const {
-  // @@protoc_insertion_point(field_get:xn_adp.CandidateAd.planid)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.CandidateAd.planid)
   return planid_;
 }
 inline void CandidateAd::set_planid(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   planid_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.CandidateAd.planid)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.CandidateAd.planid)
 }
 
 // int32 campid = 2;
@@ -708,13 +711,13 @@ inline void CandidateAd::clear_campid() {
   campid_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 CandidateAd::campid() const {
-  // @@protoc_insertion_point(field_get:xn_adp.CandidateAd.campid)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.CandidateAd.campid)
   return campid_;
 }
 inline void CandidateAd::set_campid(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   campid_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.CandidateAd.campid)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.CandidateAd.campid)
 }
 
 // int32 advid = 3;
@@ -722,13 +725,13 @@ inline void CandidateAd::clear_advid() {
   advid_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 CandidateAd::advid() const {
-  // @@protoc_insertion_point(field_get:xn_adp.CandidateAd.advid)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.CandidateAd.advid)
   return advid_;
 }
 inline void CandidateAd::set_advid(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   advid_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.CandidateAd.advid)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.CandidateAd.advid)
 }
 
 // int32 landingtype = 4;
@@ -736,13 +739,13 @@ inline void CandidateAd::clear_landingtype() {
   landingtype_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 CandidateAd::landingtype() const {
-  // @@protoc_insertion_point(field_get:xn_adp.CandidateAd.landingtype)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.CandidateAd.landingtype)
   return landingtype_;
 }
 inline void CandidateAd::set_landingtype(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   landingtype_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.CandidateAd.landingtype)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.CandidateAd.landingtype)
 }
 
 // int32 actiontype = 6;
@@ -750,13 +753,13 @@ inline void CandidateAd::clear_actiontype() {
   actiontype_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 CandidateAd::actiontype() const {
-  // @@protoc_insertion_point(field_get:xn_adp.CandidateAd.actiontype)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.CandidateAd.actiontype)
   return actiontype_;
 }
 inline void CandidateAd::set_actiontype(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   actiontype_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.CandidateAd.actiontype)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.CandidateAd.actiontype)
 }
 
 // string category = 7;
@@ -764,39 +767,39 @@ inline void CandidateAd::clear_category() {
   category_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& CandidateAd::category() const {
-  // @@protoc_insertion_point(field_get:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.CandidateAd.category)
   return category_.GetNoArena();
 }
 inline void CandidateAd::set_category(const std::string& value) {
   
   category_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.CandidateAd.category)
 }
 inline void CandidateAd::set_category(std::string&& value) {
   
   category_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_set_rvalue:xn_adp.ml.CandidateAd.category)
 }
 inline void CandidateAd::set_category(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   category_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_set_char:xn_adp.ml.CandidateAd.category)
 }
 inline void CandidateAd::set_category(const char* value, size_t size) {
   
   category_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_set_pointer:xn_adp.ml.CandidateAd.category)
 }
 inline std::string* CandidateAd::mutable_category() {
   
-  // @@protoc_insertion_point(field_mutable:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_mutable:xn_adp.ml.CandidateAd.category)
   return category_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* CandidateAd::release_category() {
-  // @@protoc_insertion_point(field_release:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_release:xn_adp.ml.CandidateAd.category)
   
   return category_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -807,40 +810,40 @@ inline void CandidateAd::set_allocated_category(std::string* category) {
     
   }
   category_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), category);
-  // @@protoc_insertion_point(field_set_allocated:xn_adp.CandidateAd.category)
+  // @@protoc_insertion_point(field_set_allocated:xn_adp.ml.CandidateAd.category)
 }
 
 // -------------------------------------------------------------------
 
 // PredictRequest
 
-// .xn_adp.BidRequest bidreq = 1;
+// .xn_adp.tracking.BidRequest bidreq = 1;
 inline bool PredictRequest::has_bidreq() const {
   return this != internal_default_instance() && bidreq_ != nullptr;
 }
-inline const ::xn_adp::BidRequest& PredictRequest::bidreq() const {
-  const ::xn_adp::BidRequest* p = bidreq_;
-  // @@protoc_insertion_point(field_get:xn_adp.PredictRequest.bidreq)
-  return p != nullptr ? *p : *reinterpret_cast<const ::xn_adp::BidRequest*>(
-      &::xn_adp::_BidRequest_default_instance_);
+inline const ::xn_adp::tracking::BidRequest& PredictRequest::bidreq() const {
+  const ::xn_adp::tracking::BidRequest* p = bidreq_;
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictRequest.bidreq)
+  return p != nullptr ? *p : *reinterpret_cast<const ::xn_adp::tracking::BidRequest*>(
+      &::xn_adp::tracking::_BidRequest_default_instance_);
 }
-inline ::xn_adp::BidRequest* PredictRequest::release_bidreq() {
-  // @@protoc_insertion_point(field_release:xn_adp.PredictRequest.bidreq)
+inline ::xn_adp::tracking::BidRequest* PredictRequest::release_bidreq() {
+  // @@protoc_insertion_point(field_release:xn_adp.ml.PredictRequest.bidreq)
   
-  ::xn_adp::BidRequest* temp = bidreq_;
+  ::xn_adp::tracking::BidRequest* temp = bidreq_;
   bidreq_ = nullptr;
   return temp;
 }
-inline ::xn_adp::BidRequest* PredictRequest::mutable_bidreq() {
+inline ::xn_adp::tracking::BidRequest* PredictRequest::mutable_bidreq() {
   
   if (bidreq_ == nullptr) {
-    auto* p = CreateMaybeMessage<::xn_adp::BidRequest>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::xn_adp::tracking::BidRequest>(GetArenaNoVirtual());
     bidreq_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:xn_adp.PredictRequest.bidreq)
+  // @@protoc_insertion_point(field_mutable:xn_adp.ml.PredictRequest.bidreq)
   return bidreq_;
 }
-inline void PredictRequest::set_allocated_bidreq(::xn_adp::BidRequest* bidreq) {
+inline void PredictRequest::set_allocated_bidreq(::xn_adp::tracking::BidRequest* bidreq) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(bidreq_);
@@ -856,36 +859,36 @@ inline void PredictRequest::set_allocated_bidreq(::xn_adp::BidRequest* bidreq) {
     
   }
   bidreq_ = bidreq;
-  // @@protoc_insertion_point(field_set_allocated:xn_adp.PredictRequest.bidreq)
+  // @@protoc_insertion_point(field_set_allocated:xn_adp.ml.PredictRequest.bidreq)
 }
 
-// repeated .xn_adp.CandidateAd ads = 2;
+// repeated .xn_adp.ml.CandidateAd ads = 2;
 inline int PredictRequest::ads_size() const {
   return ads_.size();
 }
 inline void PredictRequest::clear_ads() {
   ads_.Clear();
 }
-inline ::xn_adp::CandidateAd* PredictRequest::mutable_ads(int index) {
-  // @@protoc_insertion_point(field_mutable:xn_adp.PredictRequest.ads)
+inline ::xn_adp::ml::CandidateAd* PredictRequest::mutable_ads(int index) {
+  // @@protoc_insertion_point(field_mutable:xn_adp.ml.PredictRequest.ads)
   return ads_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::CandidateAd >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::CandidateAd >*
 PredictRequest::mutable_ads() {
-  // @@protoc_insertion_point(field_mutable_list:xn_adp.PredictRequest.ads)
+  // @@protoc_insertion_point(field_mutable_list:xn_adp.ml.PredictRequest.ads)
   return &ads_;
 }
-inline const ::xn_adp::CandidateAd& PredictRequest::ads(int index) const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictRequest.ads)
+inline const ::xn_adp::ml::CandidateAd& PredictRequest::ads(int index) const {
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictRequest.ads)
   return ads_.Get(index);
 }
-inline ::xn_adp::CandidateAd* PredictRequest::add_ads() {
-  // @@protoc_insertion_point(field_add:xn_adp.PredictRequest.ads)
+inline ::xn_adp::ml::CandidateAd* PredictRequest::add_ads() {
+  // @@protoc_insertion_point(field_add:xn_adp.ml.PredictRequest.ads)
   return ads_.Add();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::CandidateAd >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::CandidateAd >&
 PredictRequest::ads() const {
-  // @@protoc_insertion_point(field_list:xn_adp.PredictRequest.ads)
+  // @@protoc_insertion_point(field_list:xn_adp.ml.PredictRequest.ads)
   return ads_;
 }
 
@@ -898,13 +901,13 @@ inline void PredictResult::clear_planid() {
   planid_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PredictResult::planid() const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictResult.planid)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictResult.planid)
   return planid_;
 }
 inline void PredictResult::set_planid(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   planid_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.PredictResult.planid)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.PredictResult.planid)
 }
 
 // int32 pctr = 2;
@@ -912,13 +915,13 @@ inline void PredictResult::clear_pctr() {
   pctr_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PredictResult::pctr() const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictResult.pctr)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictResult.pctr)
   return pctr_;
 }
 inline void PredictResult::set_pctr(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   pctr_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.PredictResult.pctr)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.PredictResult.pctr)
 }
 
 // int32 pcvr = 3;
@@ -926,13 +929,13 @@ inline void PredictResult::clear_pcvr() {
   pcvr_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PredictResult::pcvr() const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictResult.pcvr)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictResult.pcvr)
   return pcvr_;
 }
 inline void PredictResult::set_pcvr(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   pcvr_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.PredictResult.pcvr)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.PredictResult.pcvr)
 }
 
 // -------------------------------------------------------------------
@@ -944,13 +947,13 @@ inline void PredictResponse::clear_code() {
   code_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PredictResponse::code() const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictResponse.code)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictResponse.code)
   return code_;
 }
 inline void PredictResponse::set_code(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   code_ = value;
-  // @@protoc_insertion_point(field_set:xn_adp.PredictResponse.code)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.PredictResponse.code)
 }
 
 // string msg = 2;
@@ -958,39 +961,39 @@ inline void PredictResponse::clear_msg() {
   msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& PredictResponse::msg() const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictResponse.msg)
   return msg_.GetNoArena();
 }
 inline void PredictResponse::set_msg(const std::string& value) {
   
   msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_set:xn_adp.ml.PredictResponse.msg)
 }
 inline void PredictResponse::set_msg(std::string&& value) {
   
   msg_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_set_rvalue:xn_adp.ml.PredictResponse.msg)
 }
 inline void PredictResponse::set_msg(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_set_char:xn_adp.ml.PredictResponse.msg)
 }
 inline void PredictResponse::set_msg(const char* value, size_t size) {
   
   msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_set_pointer:xn_adp.ml.PredictResponse.msg)
 }
 inline std::string* PredictResponse::mutable_msg() {
   
-  // @@protoc_insertion_point(field_mutable:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_mutable:xn_adp.ml.PredictResponse.msg)
   return msg_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* PredictResponse::release_msg() {
-  // @@protoc_insertion_point(field_release:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_release:xn_adp.ml.PredictResponse.msg)
   
   return msg_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -1001,36 +1004,36 @@ inline void PredictResponse::set_allocated_msg(std::string* msg) {
     
   }
   msg_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), msg);
-  // @@protoc_insertion_point(field_set_allocated:xn_adp.PredictResponse.msg)
+  // @@protoc_insertion_point(field_set_allocated:xn_adp.ml.PredictResponse.msg)
 }
 
-// repeated .xn_adp.PredictResult data = 3;
+// repeated .xn_adp.ml.PredictResult data = 3;
 inline int PredictResponse::data_size() const {
   return data_.size();
 }
 inline void PredictResponse::clear_data() {
   data_.Clear();
 }
-inline ::xn_adp::PredictResult* PredictResponse::mutable_data(int index) {
-  // @@protoc_insertion_point(field_mutable:xn_adp.PredictResponse.data)
+inline ::xn_adp::ml::PredictResult* PredictResponse::mutable_data(int index) {
+  // @@protoc_insertion_point(field_mutable:xn_adp.ml.PredictResponse.data)
   return data_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::PredictResult >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::PredictResult >*
 PredictResponse::mutable_data() {
-  // @@protoc_insertion_point(field_mutable_list:xn_adp.PredictResponse.data)
+  // @@protoc_insertion_point(field_mutable_list:xn_adp.ml.PredictResponse.data)
   return &data_;
 }
-inline const ::xn_adp::PredictResult& PredictResponse::data(int index) const {
-  // @@protoc_insertion_point(field_get:xn_adp.PredictResponse.data)
+inline const ::xn_adp::ml::PredictResult& PredictResponse::data(int index) const {
+  // @@protoc_insertion_point(field_get:xn_adp.ml.PredictResponse.data)
   return data_.Get(index);
 }
-inline ::xn_adp::PredictResult* PredictResponse::add_data() {
-  // @@protoc_insertion_point(field_add:xn_adp.PredictResponse.data)
+inline ::xn_adp::ml::PredictResult* PredictResponse::add_data() {
+  // @@protoc_insertion_point(field_add:xn_adp.ml.PredictResponse.data)
   return data_.Add();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::PredictResult >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::xn_adp::ml::PredictResult >&
 PredictResponse::data() const {
-  // @@protoc_insertion_point(field_list:xn_adp.PredictResponse.data)
+  // @@protoc_insertion_point(field_list:xn_adp.ml.PredictResponse.data)
   return data_;
 }
 
@@ -1046,6 +1049,7 @@ PredictResponse::data() const {
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace ml
 }  // namespace xn_adp
 
 // @@protoc_insertion_point(global_scope)

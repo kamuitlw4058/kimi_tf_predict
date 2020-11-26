@@ -25,6 +25,7 @@ add_executable(tf_predictor src/main/cpp/main.cc
                 src/main/cpp/utils.cc
                 src/main/cpp/model_predict_service.cc
                 src/main/cpp/pb/ml.pb.cc
+                src/main/cpp/pb/tracking.pb.cc
                 src/main/cpp/predict_model.cc
                 src/main/cpp/model_manager.cc
                 )

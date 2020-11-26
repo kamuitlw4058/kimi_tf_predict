@@ -25,10 +25,7 @@ using namespace ::apache::thrift;
 using namespace ::apache::thrift::protocol;
 using namespace ::apache::thrift::transport;
 using namespace ::apache::thrift::server;
-using namespace ::xnad::ml;
-
-
-
+using namespace ::xn_adp::ml;
 
 
 int main()

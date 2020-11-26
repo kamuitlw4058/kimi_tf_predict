@@ -1,25 +1,39 @@
 #include "model_predict_service.h"
 
-using namespace ::xnad::ml;
-
 ModelPredictServiceHandler::ModelPredictServiceHandler()
 {
 }
 
 void ModelPredictServiceHandler::convertPb(PredictRequest &request, vector<map<string, string>> &ret)
 {
-
     auto ads_count = request.ads_size();
-    auto os = std::to_string(request.os());
-    auto brand = request.brand();
-    auto model = request.model();
-    auto devtype = request.devtype();
-    auto ppi = std::to_string(request.ppi());
-    auto mccmnc = request.operator_();
-    auto conn = std::to_string(request.conn());
-    auto province = request.province();
-    auto city = request.city();
-    auto carrier = request.carrier();
+    
+    // bidinfo
+    auto bidRequest = request.bidreq();
+   
+    //network info
+    auto mccmnc = bidRequest.operator_();
+    auto conn = std::to_string(bidRequest.conn());
+    auto carrier = bidRequest.carrier();
+
+    //device info
+    auto os = std::to_string(bidRequest.os());
+    auto brand = bidRequest.brand();
+    auto model = bidRequest.model();
+    auto devtype = bidRequest.devtype();
+    auto ppi = std::to_string(bidRequest.ppi());
+
+    // location
+    auto locationInfo =  bidRequest.location();
+    auto province = locationInfo.province();
+    auto city = locationInfo.city();
+    auto district = locationInfo.district();
+    auto street = locationInfo.street();
+    auto poi_name = locationInfo.poi_name();
+
+    //media info 
+    auto app_id = bidRequest.app_id();
+    auto imp_type = bidRequest.imp_type();
 
     for (int i = 0; i < ads_count; i++)
     {
@@ -36,14 +50,21 @@ void ModelPredictServiceHandler::convertPb(PredictRequest &request, vector<map<s
 
         row_dict["Geo_City"] = city;
         row_dict["Geo_Province"] = province;
+        row_dict["Geo_District"] = district;
+        row_dict["Geo_Street"] = street;
+        row_dict["Geo_PoiName"] = poi_name;
 
+        row_dict["Geo_Street"] = street;
+        row_dict["Geo_PoiName"] = poi_name;
+
+        //ads info
         CandidateAd ad = request.ads(i);
         auto actiontype = std::to_string(ad.actiontype());
         auto imptype = std::to_string(ad.imptype());
         auto landingtype = std::to_string(ad.landingtype());
         auto category = ad.category();
 
-        row_dict["Slot_Type"] = imptype;
+        row_dict["Slot_ImpType"] = imptype;
         row_dict["Slot_ActionType"] = actiontype;
         row_dict["Slot_LandingType"] = landingtype;
         row_dict["Slot_Category"] = category;
