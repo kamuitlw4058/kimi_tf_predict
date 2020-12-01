@@ -9,3 +9,5 @@ src/protobuf_model
 *.pyc
 src/main/python/api
 data/package
+nohup.out
+src/main/python/logs
