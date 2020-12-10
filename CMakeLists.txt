@@ -6,7 +6,6 @@ project(my_project)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(/usr/local/include)
-include_directories(/usr/local/inotify/include)
 
 include_directories(/home/wls81/envs/tensorflow/tensorflow-1.15.4)
 include_directories(~/envs/anaconda3/envs/py36/lib/python3.6/site-packages/tensorflow_core/include)

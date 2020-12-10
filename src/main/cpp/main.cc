@@ -21,10 +21,16 @@ using namespace tensorflow;
 #include <thrift/transport/TServerSocket.h>
 #include <thrift/transport/TBufferTransports.h>
 
+#include <thrift/concurrency/ThreadManager.h>
+#include <thrift/concurrency/ThreadFactory.h>
+#include <thrift/server/TThreadPoolServer.h>
+#include <thrift/server/TThreadedServer.h>
+
 using namespace ::apache::thrift;
 using namespace ::apache::thrift::protocol;
 using namespace ::apache::thrift::transport;
 using namespace ::apache::thrift::server;
+using namespace ::apache::thrift::concurrency;
 using namespace ::xn_adp::ml;
 
 
@@ -37,14 +43,32 @@ int main()
     //     cout << indexer.to_string() << endl;
     // }
 
-  int port = 9090;
+  int port = 10090;
+  int cpu_number = 8; 
   ::std::shared_ptr<ModelPredictServiceHandler> handler(new ModelPredictServiceHandler());
   ::std::shared_ptr<TProcessor> processor(new ModelPredictServiceProcessor(handler));
   ::std::shared_ptr<TServerTransport> serverTransport(new TServerSocket(port));
   ::std::shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
   ::std::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
 
-  TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
+  // TSimpleServer server(processor, serverTransport, transportFactory, protocolFactory);
+  // server.serve();
+
+
+
+  shared_ptr<ThreadManager> threadManager = ThreadManager::newSimpleThreadManager(cpu_number);
+  shared_ptr<ThreadFactory> threadFactory  = shared_ptr<ThreadFactory>(new ThreadFactory());
+  threadManager->threadFactory(threadFactory);
+  threadManager->start();
+  printf("start.../n");
+ 
+  TThreadPoolServer server(processor,
+                           serverTransport,
+                           transportFactory,
+                           protocolFactory,
+                           threadManager);
+
   server.serve();
+
   return 0;
 }
